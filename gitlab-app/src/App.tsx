@@ -3,7 +3,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 
-export default function SimpleContainer() {
+
+function App() {
   return (
     <React.Fragment>
       <CssBaseline />
@@ -13,3 +14,6 @@ export default function SimpleContainer() {
     </React.Fragment>
   );
 }
+
+
+export default App;
