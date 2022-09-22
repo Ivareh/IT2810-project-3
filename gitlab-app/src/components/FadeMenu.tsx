@@ -35,9 +35,8 @@ export default function FadeMenu() {
         onClose={handleClose}
         TransitionComponent={Fade}
       >
-        <MenuItem onClick={handleClose}>About</MenuItem>
-        <MenuItem onClick={handleClose}>Settings</MenuItem>
-        <MenuItem onClick={handleClose}>Data</MenuItem>
+        <MenuItem onClick={handleClose}>GitLab Repo Data</MenuItem>
+        <MenuItem onClick={handleClose}>Upload Repo</MenuItem>
       </Menu>
     </div>
   );
