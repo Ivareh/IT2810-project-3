@@ -38,8 +38,12 @@ const GitLabTheme = createTheme({
       main: '#544389',
       darker: '#e24328',
     },
+    secondary: {
+      main: '#fff',
+      darker: '#d4d4d4',
+    },
     neutral: {
-      main: '#ffa427',
+      main: '#fff',
       contrastText: '#fff',
     },
   },
