@@ -1,15 +1,14 @@
-import React from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
+import { CssBaseline } from '@mui/material';
 import Header from './components/Header';
 
 
 
 function App() {
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Header />
-    </React.Fragment>
+    <>
+    <CssBaseline></CssBaseline>
+    <Header></Header>
+    </>
   ); 
 }
 
