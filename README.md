@@ -4,4 +4,4 @@ Welcome to the app in Project 2, created by Team 62!
 
 To run the app commands:
 
-    $ npm install typescript --save-dev
+    $ npm install typescript --save-dev @mui/material @emotion/react @emotion/styled browser-router
