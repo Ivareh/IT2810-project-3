@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import CssBaseline from '@mui/material/CssBaseline';
 import Header from './components/Header';
 
