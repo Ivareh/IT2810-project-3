@@ -14,9 +14,6 @@ function GitLabAppBar(props: AppBarProps){ {
                     <GitLabIcon htmlColor="#e24329" fontSize="large"></GitLabIcon>
                   </IconButton>
                   <Menu></Menu>
-                  <Typography variant="h6" align="center" color="white" sx={{marginLeft:2}}>
-                      GitLab Repo Dataloader
-                  </Typography>
                 </Toolbar>
             </AppBar>
         </ThemeProvider>
