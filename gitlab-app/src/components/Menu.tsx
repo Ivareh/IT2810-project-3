@@ -10,7 +10,6 @@ import GitLabTheme from '../themes/GitLabTheme';
 
 /* This component is from https://mui.com/material-ui/react-menu/ with some customization (added icon and adjusted menu text) */
 export default function PositionedMenu() {
-  var openMenu = false;
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const [buttonFlag, setButtonFlag] = React.useState(true);
