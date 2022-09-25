@@ -1,19 +1,17 @@
-import {Box, Container, ThemeProvider, Typography, TypographyProps} from '@mui/material';
-import GitLabTheme from '../themes/GitLabTheme';
-
+import {Box, Container, Typography, TypographyProps} from '@mui/material';
 
 /* Loads GitLab data from a repo*/
 function GitLabRepoDataLoader(props: TypographyProps) {
   return (
     <>
-      <Container >
-        <Box>
-          <Typography align="left" variant="h4" fontWeight={500} gutterBottom > GitLab Repo Data Loader </Typography>
-        </Box>
-        <Box component="span"   >
-          <Typography ml={5} align="left" variant="body1" fontWeight={500} gutterBottom > hey</Typography>
-        </Box>
-      </Container>
+   <Container maxWidth="lg">
+      <Box mt={10}>
+        <Typography align="left" variant="h4" fontWeight={500} gutterBottom > GitLab Repo Data Loader </Typography>
+          <Box border={1} minHeight={20}>
+            {/* Form to load data */}
+          </Box>
+      </Box>
+    </Container>
     </>
   )
 }
