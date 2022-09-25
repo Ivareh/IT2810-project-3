@@ -57,8 +57,8 @@ export default function PositionedMenu() {
           horizontal: 0,
         }}
       >
-        <MenuItem onClick={handleClose}>GitLab Repo</MenuItem>
         <MenuItem onClick={handleClose}>GitLab Repo Dataloader</MenuItem>
+        <MenuItem onClick={handleClose}>GitLab Repo</MenuItem>
       </Menu>
       </ThemeProvider>
     </div>
