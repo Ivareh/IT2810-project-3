@@ -2,10 +2,16 @@
   "compilerOptions": {
     "target": "es5",
     "lib": [
+      "es6",
       "dom",
       "dom.iterable",
       "esnext"
     ],
+    /* For recommended Typescript + @MUI, see https://mui.com/material-ui/guides/typescript/#customization-of-theme */
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": false,
+    /*  */
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
