@@ -1,20 +1,21 @@
-import { Box, CssBaseline } from '@mui/material';
-import { Container } from '@mui/system';
+import { CssBaseline } from '@mui/material';
+import {BrowserRouter, BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Header from './components/Header';
 import GitLabRepoDataLoader from './components/GitLabRepoDataLoader';
+import GitLabRepo from './components/GitLabRepo';
 
 
 function App() {
   return (
-    <>    
-    <CssBaseline/>
-      <Box marginBottom={10 }>
-       <Header/>
-      </Box>
-      <Box className="GitLabRepoDataLoader" marginLeft={35} maxHeight={"100%"}>
-        <GitLabRepoDataLoader/>
-      </Box>
-    </>
+    <Router>
+      <CssBaseline/>
+      <Header/>
+      <Routes>
+        <Route path="/" element={<GitLabRepoDataLoader/>}/>
+        <Route path="/gitlab-repo" element={<GitLabRepo/>}/>
+      </Routes>
+
+    </Router>
   ); 
 }
 
