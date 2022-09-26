@@ -1,4 +1,5 @@
 import {Box, Container, Typography, TypographyProps} from '@mui/material';
+import InputForm from "./InputForm";
 
 /* Loads GitLab data from a repo*/
 function GitLabRepoDataLoader(props: TypographyProps) {
@@ -7,8 +8,8 @@ function GitLabRepoDataLoader(props: TypographyProps) {
    <Container maxWidth="lg">
       <Box mt={10}>
         <Typography align="left" variant="h4" fontWeight={500} gutterBottom > GitLab Repo Data Loader </Typography>
-          <Box border={1} minHeight={20}>
-            {/* Form to load data */}
+          <Box border={0} minHeight={20}>
+            <InputForm/>
           </Box>
       </Box>
     </Container>
