@@ -22,7 +22,7 @@ function GitLabDataTable (){
   useEffect (() => {
     let data : CommitItem[] = getPropValues()
     setTableData(data)
-  })
+  },[])
 
   return (
     <TableContainer component={Paper} sx={{maxHeight:400}}>
