@@ -1,20 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Grid } from "@mui/material";
+import Header from "./components/Header";
+import Footer from './components/Footer';
+import About from "./components/About";
+import Upload from "./components/GitlabRepo";
 import './App.css';
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 
 
 function App() {
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Container maxWidth="sm">
-        <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} />
-      </Container>
-    </React.Fragment>
-  ); 
+    <Grid container direction={"column"} minHeight={'100vh'} 
+    style={{
+      backgroundColor: "white",
+    }}>
+      <Header />
+      <About />
+      <Upload />
+      <Footer />
+    </Grid>
+  );
 }
 
 export default App;
