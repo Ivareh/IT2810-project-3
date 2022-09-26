@@ -4,35 +4,16 @@ import Button from '@mui/material/Button';
 import {useState} from "react";
 
 export default function InputForm() {
-    const [domain, setDomain] = useState('https://gitlab.stud.idi.ntnu.no/api/v4/projects/')
-    const [projectId, setProjectId] = useState('17598')
-    const [token, setToken] = useState('glpat-2vnnyXYGFDt9YKYu5QYW')
-    const [issues, setIssues] = useState([])
-    const [commits, setCommits] = useState([])
+    const [domain, setDomain] = useState('https://gitlab.stud.idi.ntnu.no/')
+    const [id, setId] = useState('')
+    const [token, setToken] = useState('')
 
-    const handleSubmit = async (e: { preventDefault: () => void; }) => {
+    const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault()
-        await fetchIssues()
-        await fetchCommits()
-        console.log(issues)
-        console.log(commits)
+        console.log(domain)
 
     }
 
-    const fetchIssues = async () => {
-        await fetch(`${domain}/${projectId}/issues?private_token=${token}`)
-            .then((res) => res.json())
-            .then((result) => {
-                setIssues(result)
-            })
-    }
-    const fetchCommits = async () => {
-        await fetch(`${domain}/${projectId}/repository/commits?private_token=${token}`)
-            .then((res) => res.json())
-            .then((result) => {
-                setCommits(result)
-            })
-    }
 
     return (
         <div>
@@ -45,16 +26,18 @@ export default function InputForm() {
                            type="text"
                            value={domain}
                            onChange={(event) => {
-                               setDomain(event.target.value as string)
+                               setDomain(event.target.value)
+                               console.log(domain)
                            }}
                 />
                 <TextField id="gitlab-id"
-                           label="Project id"
-                           sx={{minWidth: '200px'}}
+                           label="id"
+                           sx={{width: 500}}
                            type="number"
-                           value={projectId}
+                           value={id}
                            onChange={(event) => {
-                               setProjectId(event.target.value as string)
+                               setId(event.target.value)
+                               console.log(token)
                            }}
                 />
                 <TextField id="outlined-search"
@@ -63,7 +46,8 @@ export default function InputForm() {
                            type="text"
                            value={token}
                            onChange={(event) => {
-                               setToken(event.target.value as string)
+                               setToken(event.target.value)
+                               console.log(token)
                            }}
                 />
                 <Button
@@ -73,10 +57,6 @@ export default function InputForm() {
                     Get
                 </Button>
             </form>
-
-            {issues.map((issue) => (
-                <p key={issue.iid}>{issue.title}</p>
-            ))}
         </div>
     )
 
