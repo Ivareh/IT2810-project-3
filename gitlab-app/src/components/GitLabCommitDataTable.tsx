@@ -17,7 +17,7 @@ function getPropValues(){
 }
 
 /* Table, inspired by https://www.youtube.com/watch?v=qk2oY7W3fuY*/
-function GitLabDataTable (){
+function GitLabCommitDataTable (){
   const [tableData, setTableData] = useState([]);
   
   // Sets data to the table once when the component is mounted
@@ -58,4 +58,4 @@ function GitLabDataTable (){
 
   
 
-export default GitLabDataTable
+export default GitLabCommitDataTable
