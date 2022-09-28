@@ -16,7 +16,7 @@ function getPropValues(){
 }
 
 /* Table, inspired by https://www.youtube.com/watch?v=qk2oY7W3fuY*/
-function GitLabDataTable (){
+function GitLabCommitDataTable (){
   const [tableData, setTableData] = useState([]);
   
   useEffect (() => {
@@ -56,4 +56,4 @@ function GitLabDataTable (){
 
   
 
-export default GitLabDataTable
+export default GitLabCommitDataTable

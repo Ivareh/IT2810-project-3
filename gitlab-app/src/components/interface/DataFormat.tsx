@@ -5,3 +5,12 @@ export interface CommitItem {
     committer_name: string;
     committed_date: string;
   }
+
+
+export interface IssueItem {
+    id: number;
+    title: string;
+    description: string;
+    state: string;
+    created_at: string;
+  }
