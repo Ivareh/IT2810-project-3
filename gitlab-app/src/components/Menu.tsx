@@ -10,7 +10,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { grey } from '@mui/material/colors';
 
 
-/* This component is from https://mui.com/material-ui/react-menu/ with some customization (added icon and adjusted menu text) */
+/* This component is from https://mui.com/material-ui/react-menu/ with some customization */
 export default function PositionedMenu() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);

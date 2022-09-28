@@ -1,7 +1,7 @@
 /* import {CommitItem} from "../interface/DataFormat" */
 import { CommitItem } from "../interface/DataFormat";
 
-
+// Sample data from the GitLab API
 const SampleCommitData : CommitItem[] = 
 [{
     "id": 1,
