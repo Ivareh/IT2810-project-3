@@ -18,7 +18,6 @@ function GitLabRepo() {
         <Box border={1} width="sm">
           <GitLabIssueDataTable/>
         </Box>
- 
       </Box>
     </Container>
   )

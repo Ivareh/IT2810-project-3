@@ -2,17 +2,65 @@ import {TableContainer, Table, TableHead, TableRow, TableBody, Paper, TableCell}
 import { useEffect, useState } from 'react';
  import SampleCommitData from './data/SampleCommitData'; 
 import {CommitItem} from "./interface/DataFormat"
+import {filterById, filterByTitle, filterByAuthor, filterByCommitter, filterByDate} from "./FilterCommitData"
 
 
-function getPropValues(){
-  let data : Array<CommitItem> = []
-  let sampleData = SampleCommitData;
-  sampleData.forEach((item) => {
-    item.forEach((value) => {
-      data.push(value)
-    })
-  })
-  return data
+// Checks if inputs are valid
+function checkValidInputs( filterKey : string, filterString : string) {
+  if ((filterKey && !filterString) || (!filterKey && filterString)) {
+    throw new Error("Invalid input, must have both filter key and filter string")
+  }
+  if (filterKey && filterString) {
+    switch(filterKey){
+      case "id":
+        if (isNaN(parseInt(filterString))) {
+          throw new Error("Invalid input, filter string must be a number")
+        }
+        break;
+      case "title":
+        break;
+      case "author_name":
+        break;
+      case "committer_name":
+        break;
+      case "committed_date":
+        break;
+      default:
+        throw new Error("Invalid input, filter key is not valid")
+    }
+  }
+  return true
+}
+// Gets data. If there is applied a filter, it will return the filtered data
+// If there is no filter, it will return the original data
+function getPropValues(filterKey : string, filterString : string) {
+  let sampleData = SampleCommitData.flat();
+  filterKey="id"
+  filterString="10"
+  if(filterKey && filterString) {
+    try{
+      checkValidInputs(filterKey, filterString)
+      switch(filterKey){
+        case "id":
+          return filterById(sampleData, filterString)
+        case "title":
+          return filterByTitle(sampleData, filterString)
+        case "author_name":
+          return filterByAuthor(sampleData, filterString)
+        case "committer_name":
+          return filterByCommitter(sampleData, filterString)
+        case "committed_date":
+          return filterByDate(sampleData, filterString)
+        default:
+          return sampleData
+      }
+      }
+    catch(e){
+      console.log("No data found, check if filter inputs are correct" + "\n" + e)
+      return []
+    }
+  }
+  return sampleData
 }
 
 /* Table, inspired by https://www.youtube.com/watch?v=qk2oY7W3fuY*/
@@ -20,7 +68,7 @@ function GitLabCommitDataTable (){
   const [tableData, setTableData] = useState([]);
   
   useEffect (() => {
-    let data : CommitItem[] = getPropValues()
+    let data : CommitItem[] = getPropValues("", "")
     setTableData(data)
   },[])
 
