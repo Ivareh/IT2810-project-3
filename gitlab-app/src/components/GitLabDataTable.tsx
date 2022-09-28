@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import {CommitItem} from "./interface/DataFormat"
 
 
+// Gets the data from the SampleCommitData file
 function getPropValues(){
   let data : Array<CommitItem> = []
   let sampleData = SampleCommitData;
@@ -19,6 +20,7 @@ function getPropValues(){
 function GitLabDataTable (){
   const [tableData, setTableData] = useState([]);
   
+  // Sets data to the table once when the component is mounted
   useEffect (() => {
     let data : CommitItem[] = getPropValues()
     setTableData(data)
