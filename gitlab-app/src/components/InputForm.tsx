@@ -15,6 +15,8 @@ export default function InputForm() {
         e.preventDefault()
         await fetchIssues()
         await fetchCommits()
+        console.log(issues)
+        console.log(commits)
 
     }
 
