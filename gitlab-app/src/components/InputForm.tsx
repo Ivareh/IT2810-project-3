@@ -10,18 +10,17 @@ export default function InputForm() {
     const [projectId, setProjectId] = useState('17598')
     const [token, setToken] = useState('glpat-2vnnyXYGFDt9YKYu5QYW')
     const navigate = useNavigate()
-    let [data, setData] = useState(Object)
+
 
     const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault()
         fetchCommits().then((data) => localStorage.setItem('commits',
             JSON.stringify(data))).then(() =>
             alert('Data loaded!'))
-        fetchIssues().then((data) => setData(data)).then(() =>
-            localStorage.setItem('issues', JSON.stringify(data))).then(() =>
+
+        fetchIssues().then((data) => localStorage.setItem('issues',
+            JSON.stringify(data))).then(() =>
             navigate('/gitlab-repo'))
-
-
     }
 
 
