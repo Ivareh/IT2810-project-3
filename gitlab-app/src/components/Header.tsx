@@ -1,6 +1,7 @@
 import GitLabAppBar from './GitLabAppBar';
 
 
+// Header of the application
 function Header() {
   return(
     <div>
