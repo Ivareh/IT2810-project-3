@@ -56,16 +56,16 @@ function GitLabCommitDataTable() {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {tableData.map((row =>
+                    {commits.map((commit =>
                             <TableRow
-                                key={row.id}
+                                key={commit.id}
                                 sx={{'&:last-child td, &:last-child th': {border: 0}}}
                             >
-                                <TableCell width={600}>{row.title}</TableCell>
-                                <TableCell>{row.author_name}</TableCell>
-                                <TableCell>{row.committer_name}</TableCell>
+                                <TableCell width={600}>{commit.title}</TableCell>
+                                <TableCell>{commit.author_name}</TableCell>
+                                <TableCell>{commit.committer_name}</TableCell>
                                 <TableCell
-                                    align='center'>{row.committed_date}</TableCell>
+                                    align='center'>{commit.committed_date}</TableCell>
                             </TableRow>
                     ))}
                 </TableBody>

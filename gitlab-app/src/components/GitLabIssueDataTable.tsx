@@ -75,16 +75,16 @@ function GitLabIssueDataTable() {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {tableData.map((row =>
+                    {issues.map((issue =>
                             <TableRow
-                                key={row.id}
+                                key={issue.iid}
                                 sx={{'&:last-child td, &:last-child th': {border: 0}}}
                             >
-                                <TableCell width={600}>{row.title}</TableCell>
-                                <TableCell>{row.description}</TableCell>
-                                <TableCell>{row.state}</TableCell>
+                                <TableCell width={600}>{issue.title}</TableCell>
+                                <TableCell>{issue.description}</TableCell>
+                                <TableCell>{issue.state}</TableCell>
                                 <TableCell
-                                    align='center'>{row.created_at}</TableCell>
+                                    align='center'>{issue.created_at}</TableCell>
                             </TableRow>
                     ))}
                 </TableBody>
