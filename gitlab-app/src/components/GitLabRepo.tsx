@@ -1,6 +1,6 @@
 import { Container, Typography, Button } from "@mui/material"
 import { Box } from "@mui/system"
-import GitLabCommitDataTable from "./GitLabCommitDataTable"
+import GitLabCommitDataTable from "./GitLabDataTable"
 import GitLabIssueDataTable from "./GitLabIssueDataTable"
 import FilterForm from "./FilterForm"
 /* import {CommitItem} from "./interface/DataFormat" */

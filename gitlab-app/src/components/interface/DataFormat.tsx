@@ -1,5 +1,8 @@
-export interface CommitItem {
-    id: number;
+export interface DataItem {
+  id: number;
+}
+
+export interface CommitItem extends DataItem {
     title: string;
     author_name: string;
     committer_name: string;
@@ -7,8 +10,7 @@ export interface CommitItem {
   }
 
 
-export interface IssueItem {
-    id: number;
+export interface IssueItem extends DataItem {
     title: string;
     description: string;
     state: string;
