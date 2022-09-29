@@ -72,7 +72,8 @@ function GitLabDataTable() {
 
     return (
         <TableContainer component={Paper} sx={{maxHeight: 400}}>
-            <button onClick={() => printData()}>Print data and size of localStorage
+            <button onClick={() => printData()}>Print data and size of
+                localStorage
             </button>
             <Table aria-label="simple table" stickyHeader>
                 <TableHead>
