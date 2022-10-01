@@ -9,7 +9,7 @@ import TextField from '@mui/material/TextField';
 
 export default function BasicSelect() {
   const [filterType, setFilterType] = useState('10');
-  const [filterValue, setFilterValue] = useState('10');
+  const [filterValue, setFilterValue] = useState('');
 
   const handleChangeFilterValue = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     const tmp = event.target.value;
@@ -40,11 +40,10 @@ export default function BasicSelect() {
         value={filterType}
         onChange={handleChangeFilterType}
         >
-          <MenuItem value={10}>Title</MenuItem>
-          <MenuItem value={20}>Author</MenuItem>
-          <MenuItem value={30}>Committer</MenuItem>
-          <MenuItem value={40}>Before</MenuItem>
-          <MenuItem value={50}>After</MenuItem>
+          <MenuItem value={"id"}>Title</MenuItem>
+          <MenuItem value={"author_name"}>Author</MenuItem>
+          <MenuItem value={"commiter_name"}>Committer</MenuItem>
+          <MenuItem value={"committed_date"}>Date</MenuItem>
         </Select>
       </FormControl>
       <TextField
