@@ -8,8 +8,8 @@ import Select from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
 
 export default function BasicSelect() {
-  const [filterType, setFilterType] = useState('');
-  const [filterValue, setFilterValue] = useState('');
+  const [filterType, setFilterType] = useState('10');
+  const [filterValue, setFilterValue] = useState('10');
 
   const handleChangeFilterValue = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     const tmp = event.target.value;
