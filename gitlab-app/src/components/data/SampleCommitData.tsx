@@ -30,7 +30,7 @@ const SampleCommitData : CommitItem[] =
   }, {
     "id": 5,
     "title": "Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
-    "author_name": "pbrucker4",
+    "author_name": "adaber2",
     "committer_name": "hshallcrass4",
     "committed_date": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo."
   }, {
