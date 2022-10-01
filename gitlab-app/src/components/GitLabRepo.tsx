@@ -1,8 +1,7 @@
 import { Container, Typography, Button } from "@mui/material"
 import { Box } from "@mui/system"
-import GitLabCommitDataTable from "./GitLabDataTable"
-import GitLabIssueDataTable from "./GitLabIssueDataTable"
 import FilterForm from "./FilterForm"
+import GitLabDataTable from "./GitLabDataTable"
 /* import {CommitItem} from "./interface/DataFormat" */
 
 
@@ -32,11 +31,10 @@ function GitLabRepo() {
         <h2>Commits</h2>
         <Box border={1} mb={10} width="sm">
           {/* Table to display data */}
-          <GitLabCommitDataTable/>
+          <GitLabDataTable datatype="commit"/>
         </Box>
         <h2>Issues</h2>
         <Box border={1} width="sm">
-          <GitLabIssueDataTable/>
         </Box>
  
       </Box>
