@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState, useEffect} from 'react';
 import Button from '@mui/material/Button';
 import { Box } from "@mui/system"
 import InputLabel from '@mui/material/InputLabel';
@@ -8,11 +8,27 @@ import Select from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
 
 export default function BasicSelect() {
+  const [filterType, setFilterType] = useState('');
+  const [filterValue, setFilterValue] = useState('');
 
- /* const handleChange = (event) => {
-    setAge(event.target.value);
+  const handleChangeFilterValue = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+    const tmp = event.target.value;
+    setFilterValue(tmp);
   };
-  */
+
+  useEffect(()=>{
+  });
+
+  const handleChangeFilterType = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+    const tmp = event.target.value;
+    setFilterType(tmp);
+  };
+
+  const sendFilterValues = () => {
+    console.log(filterType);
+    console.log(filterValue);
+    console.log("button");
+  };
 
   return (
     <>
@@ -21,6 +37,8 @@ export default function BasicSelect() {
       <FormControl fullWidth>
         <InputLabel>Filter</InputLabel>
         <Select
+        value={filterType}
+        onChange={handleChangeFilterType}
         >
           <MenuItem value={10}>Title</MenuItem>
           <MenuItem value={20}>Author</MenuItem>
@@ -29,13 +47,19 @@ export default function BasicSelect() {
           <MenuItem value={50}>After</MenuItem>
         </Select>
       </FormControl>
-      <TextField id="outlined-search"
+      <TextField
         fullWidth
         label="Value"
-        type="text" />
+        type="text"
+        onChange={handleChangeFilterValue}
+      />
 
     </Box><Box my={1} display="flex" justifyContent="flex-end">
-        <Button variant="contained">Filter</Button>
+        <Button variant="contained"
+          onClick={sendFilterValues}
+        >
+        Filter
+        </Button>
     </Box>
     </>
   );
