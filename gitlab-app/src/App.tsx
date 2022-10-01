@@ -6,10 +6,13 @@ import GitLabRepo from './components/GitLabRepo';
 import SampleCommitData from './components/data/SampleCommitData';
 /* import {CommitItem} from './components/interface/DataFormat'; */
 import React from 'react';
+import {ColorModeProvider} from "./components/contexts/ColorMode";
+import SwapModes from "./components/SwapModes";
 
 
 function App() {
   return (
+      <ColorModeProvider>
     <Router>
       <CssBaseline/>
       <Header/>
@@ -17,8 +20,9 @@ function App() {
         <Route path="/" element={<GitLabRepoDataLoader/>}/>
         <Route path="/gitlab-repo" element={<GitLabRepo/>}/>
       </Routes>
-
     </Router>
+        <SwapModes/>
+      </ColorModeProvider>
   ); 
 }
 
