@@ -1,69 +1,68 @@
-import { useState, useEffect} from 'react';
+import {useState, useEffect, MouseEventHandler} from 'react';
 import Button from '@mui/material/Button';
-import { Box } from "@mui/system"
+import {Box} from "@mui/system"
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
-import { Container } from '@mui/material';
+import {Container} from '@mui/material';
 
 export interface FilterFormProps {
-  handleChangeFilterType?(): (value: string) => void;
-  handleChangeFilterValue?(): (value: string) => void;
-  filterType?: string;
-  filterValue?: string;
-  //
+    handleClick: (filterType: string, filterValue: string) => void;
 }
 
+
 export default function FilterFormCommit(props: FilterFormProps) {
-  
-  useEffect(()=>{
-    console.log("useEffect");
-    console.log(props.filterType);
-    console.log(props.filterValue);
-  })
+    const [filterType, setFilterType] = useState('')
+    const [filterValue, setFilterValue] = useState('')
 
-  const sendFilterValues = () => {
-    console.log(props.filterType);
-    console.log(props.filterValue);
-    console.log("button");
-  };
+    useEffect(() => {
+        console.log("useEffect");
+    })
 
-  return (
-    <Box minWidth={"100%"} display="inline-flex" alignItems={"center"}>
-      <Box minWidth={"30%"} >
-        <FormControl fullWidth >
-          <InputLabel>Filtertype</InputLabel>
-          <Select
-          value={props.filterType}
-          label="Filtertype"
-          onChange={props.handleChangeFilterType}
-          >
-            <MenuItem value={"title"}>Title</MenuItem>
-            <MenuItem value={"author_name"}>Author</MenuItem>
-            <MenuItem value={"commiter_name"}>Committer</MenuItem>
-            <MenuItem value={"committed_date"}>Date</MenuItem>
-          </Select>
-        </FormControl>
-      </Box>
-      <Box minWidth={"70%"} >
-        <TextField
-          fullWidth
-          label="Value"
-          type="text"
-          onChange={props.handleChangeFilterValue}
-        />
-      </Box>
+    const sendFilterValues = () => {
+        console.log("button");
+    };
 
-      <Box justifyContent="flex-end" ml={1}>
-          <Button variant="contained"
-            onClick={sendFilterValues}
-          >
-          Filter
-          </Button>
-      </Box>
-        
-  </Box>
-  );
+    return (
+        <Box minWidth={"100%"} display="inline-flex" alignItems={"center"}>
+            <Box minWidth={"30%"}>
+                <FormControl fullWidth>
+                    <InputLabel>Filtertype</InputLabel>
+                    <Select
+                        value={'test'}
+                        label="Filtertype"
+                        onChange={(e) => {
+                            setFilterType(e.target.value as string)
+                        }}
+                    >
+                        <MenuItem value={"title"}>Title</MenuItem>
+                        <MenuItem value={"author_name"}>Author</MenuItem>
+                        <MenuItem value={"commiter_name"}>Committer</MenuItem>
+                        <MenuItem value={"committed_date"}>Date</MenuItem>
+                    </Select>
+                </FormControl>
+            </Box>
+            <Box minWidth={"70%"}>
+                <TextField
+                    fullWidth
+                    label="Value"
+                    type="text"
+                    onChange={(e) => {
+                        setFilterValue(e.target.value as string)
+                    }}
+                />
+            </Box>
+
+            <Box justifyContent="flex-end" ml={1}>
+                <Button variant="contained"
+                        onClick={() => props.handleClick(filterType, filterValue)}
+                >
+                    Filter
+                </Button>
+            </Box>
+
+        </Box>
+    );
 }
