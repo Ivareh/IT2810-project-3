@@ -13,17 +13,24 @@ function GitLabRepo() {
   const [showIssues, setShowIssues] = useState(false);
   const [commitData, setCommitData] = useState([]);
   const [issueData, setIssueData] = useState([]);
+  const [filterType, setFilterType] = useState("title");
+  const [filterValue, setFilterValue] = useState('');h
 
   function handleShowCommits() {
     try {
       setCommitData(getCommitData());
       setShowCommits(true);
       setShowIssues(false);
-    } catch (TypeError) {
-      alert("Load some data before trying to show it");
-      console.log("No data loaded yet");
+    } catch (e) {
+      if(e instanceof TypeError) {
+        alert("Load some data before trying to show it");
+        console.log("No data loaded yet");
+        console.log(e)
+      } else {
+        throw e
+      }
     }
-  }
+}
   
   function handleShowIssues() {
     try {
@@ -35,6 +42,10 @@ function GitLabRepo() {
       console.log("No data loaded yet");
     }
   }
+
+  useEffect(() => {
+    console.log("GitLabRepo"); 
+  });
 
   return (
     <>  

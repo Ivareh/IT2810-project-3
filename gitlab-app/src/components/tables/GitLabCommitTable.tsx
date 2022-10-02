@@ -17,7 +17,7 @@ function GitLabCommitTable(data: CommitTableProps) {
 
   
     return (
-    <TableContainer component={Paper} sx={{maxHeight: 600}}>
+    <TableContainer className="commitTable" component={Paper} sx={{maxHeight: 600}}>
       <Table aria-label="simple table" stickyHeader>
           <TableHead>
               <TableRow>
