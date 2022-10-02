@@ -1,3 +1,4 @@
+import { filterByAuthor } from "../filter/FilterCommitData";
 import { CommitItem, DataItem, IssueItem } from "../interface/DataFormat";
 
 

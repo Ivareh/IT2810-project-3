@@ -8,7 +8,7 @@ import Select from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
 import { Container } from '@mui/material';
 
-export default function BasicSelect() {
+export default function FilterFormIssue() {
   const [filterType, setFilterType] = useState("title");
   const [filterValue, setFilterValue] = useState('');
 
@@ -29,6 +29,7 @@ export default function BasicSelect() {
     console.log(filterType);
     console.log(filterValue);
     console.log("button");
+
   };
 
   return (

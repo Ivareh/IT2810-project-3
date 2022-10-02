@@ -8,26 +8,25 @@ import Select from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
 import { Container } from '@mui/material';
 
-export default function BasicSelect() {
-  const [filterType, setFilterType] = useState("title");
-  const [filterValue, setFilterValue] = useState('');
+export interface FilterFormProps {
+  handleChangeFilterType?(): (value: string) => void;
+  handleChangeFilterValue?(): (value: string) => void;
+  filterType?: string;
+  filterValue?: string;
+  //
+}
+
+export default function FilterFormCommit(props: FilterFormProps) {
   
-  const handleChangeFilterValue = (event: { target: { value: React.SetStateAction<string>; }; }) => {
-    const tmp = event.target.value;
-    setFilterValue(tmp);
-  };
-
   useEffect(()=>{
-  });
-
-  const handleChangeFilterType = (event: { target: { value: React.SetStateAction<string>; }; }) => {
-    const tmp = event.target.value;
-    setFilterType(tmp);
-  };
+    console.log("useEffect");
+    console.log(props.filterType);
+    console.log(props.filterValue);
+  })
 
   const sendFilterValues = () => {
-    console.log(filterType);
-    console.log(filterValue);
+    console.log(props.filterType);
+    console.log(props.filterValue);
     console.log("button");
   };
 
@@ -37,9 +36,9 @@ export default function BasicSelect() {
         <FormControl fullWidth >
           <InputLabel>Filtertype</InputLabel>
           <Select
-          value={filterType}
+          value={props.filterType}
           label="Filtertype"
-          onChange={handleChangeFilterType}
+          onChange={props.handleChangeFilterType}
           >
             <MenuItem value={"title"}>Title</MenuItem>
             <MenuItem value={"author_name"}>Author</MenuItem>
@@ -53,7 +52,7 @@ export default function BasicSelect() {
           fullWidth
           label="Value"
           type="text"
-          onChange={handleChangeFilterValue}
+          onChange={props.handleChangeFilterValue}
         />
       </Box>
 

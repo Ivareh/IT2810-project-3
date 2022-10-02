@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import GitLabCommitTable from "./tables/GitLabCommitTable"
 import { getCommitData, getIssueData } from "./custom-functions/GetData"
 import GitLabIssueTable from "./tables/GitLabIssueTable"
+import FilterFormProps from "./filter/FilterFormCommit"
 
 /* Displays Git Lab Data after it is loaded in a table with parameters*/
 function GitLabRepo() {
@@ -16,6 +17,17 @@ function GitLabRepo() {
   const [filterType, setFilterType] = useState("title");
   const [filterValue, setFilterValue] = useState('');
 
+  const handleChangeFilterValue = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+    const tmp = event.target.value;
+    setFilterValue(tmp);
+    console.log("yooyoyo")
+  };
+
+  const handleChangeFilterType = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+    const tmp = event.target.value;
+    setFilterType(tmp);
+  };
+    
   function handleShowCommits() {
     try {
       setCommitData(getCommitData());
@@ -44,6 +56,12 @@ function GitLabRepo() {
   }
 
   useEffect(() => {
+    const filterForm = {
+    handleChangeFilterType: handleChangeFilterType,
+    handleChangeFilterValue: handleChangeFilterValue,
+    filterType: filterType,
+    filterValue: filterValue
+  } 
     console.log("GitLabRepo"); 
   });
 
@@ -62,7 +80,7 @@ function GitLabRepo() {
       <Container maxWidth="lg">
         <Typography mb={5} variant="h5" fontWeight={"bold"} align="left">Commits</Typography>
         <Box maxWidth={"40%"}>
-          <FilterFormCommit/>
+          <FilterFormCommit handleChangeFilterType={handleChangeFilterType} handleChangeFilterValue={handleChangeFilterValue} filterType={filterType} filterValue={filterValue}/>
         </Box>
         <GitLabCommitTable data={commitData}/>
       </Container> 
