@@ -1,48 +1,59 @@
-import { Container, Typography, Button } from "@mui/material"
+import { Container, Typography, Button, Grid } from "@mui/material"
 import { Box } from "@mui/system"
-import FilterFormCommit from "./FilterFormCommit"
-import FilterFormIssue from "./FilterFormIssue"
+import FilterFormCommit from "./filter/FilterFormCommit"
+import FilterFormIssue from "./filter/FilterFormIssue"
 import { useState } from 'react'
-import GitLabCommitTable from "./GitLabCommitTable"
+import GitLabCommitTable from "./tables/GitLabCommitTable"
 import { getCommitData, getIssueData } from "./custom-functions/GetData"
-import GitLabIssueTable from "./GitLabIssueTable"
+import GitLabIssueTable from "./tables/GitLabIssueTable"
 
 /* Displays Git Lab Data after it is loaded in a table with parameters*/
 function GitLabRepo() {
   const [showCommits, setShowCommits] = useState(true);
   const [showIssues, setShowIssues] = useState(false);
+
+  function handleShowCommits() {
+    setShowCommits(true);
+    setShowIssues(false);
+  }
+  
+  function handleShowIssues() {
+    setShowCommits(false);
+    setShowIssues(true);
+  }
+
+
   return (
+    <>  
+      <Grid container direction={"row"} spacing={20} wrap={"nowrap"} justifyContent={"center"} mb={10}>
+        <Grid item>
+          <Button variant="contained" onClick={() => handleShowCommits()}>Commits</Button>
+        </Grid>
+        <Grid item>
+          <Button variant="contained" onClick={() => handleShowIssues()}>Issues</Button>
+        </Grid>
+      </Grid>
 
-    <Container maxWidth="lg">
-      <Box mt={10} >
-        <Typography align="left" variant="h4" fontWeight={500} gutterBottom > GitLab Repo </Typography>
-
-        <>
-          <Button variant = "contained" onClick={() => setShowCommits(prev => !prev)}>view commits</Button>
-          {showCommits && <Box>
-            <FilterFormCommit/>
-            <h2>Commits</h2>
-            <Box border={1} mb={10} width="sm">
-            {/* Table to display data */}
-            <GitLabCommitTable data={getCommitData()}/>
+      {showCommits && <Box mb={28}>
+      <Container maxWidth="lg">
+        <Typography mb={5} variant="h5" fontWeight={"bold"} align="left">Commits</Typography>
+        <Box maxWidth={"40%"}>
+          <FilterFormCommit/>
         </Box>
-          </Box>}
-        </>
+        <GitLabCommitTable data={getCommitData()}/>
+      </Container> 
+      </Box>}
 
-        <>
-        <Button variant = "contained" onClick={() => setShowIssues(prev => !prev)}>view issues</Button>
-          {showIssues && <Box>
-            <FilterFormIssue/>
-            <h2>Issues</h2>
-            <Box border={1} width="sm">
-            {/* Table to display data */}
-            <GitLabIssueTable data={getIssueData()}/>
-        </Box>
-          </Box>}
-        </>
-
-      </Box>
-    </Container>
+      {showIssues && <Box mb={28}>
+          <Container maxWidth="lg">
+            <Typography mb={5} variant="h5" fontWeight={"bold"} align="left">Issues</Typography>
+            <Box maxWidth={"40%"}>
+              <FilterFormIssue/>
+            </Box>
+          <GitLabIssueTable data={getIssueData()}/>
+        </Container> 
+        </Box>}
+    </>
   )
 }
 
