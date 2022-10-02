@@ -2,26 +2,39 @@ import { Container, Typography, Button, Grid } from "@mui/material"
 import { Box } from "@mui/system"
 import FilterFormCommit from "./filter/FilterFormCommit"
 import FilterFormIssue from "./filter/FilterFormIssue"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import GitLabCommitTable from "./tables/GitLabCommitTable"
 import { getCommitData, getIssueData } from "./custom-functions/GetData"
 import GitLabIssueTable from "./tables/GitLabIssueTable"
 
 /* Displays Git Lab Data after it is loaded in a table with parameters*/
 function GitLabRepo() {
-  const [showCommits, setShowCommits] = useState(true);
+  const [showCommits, setShowCommits] = useState(false);
   const [showIssues, setShowIssues] = useState(false);
+  const [commitData, setCommitData] = useState([]);
+  const [issueData, setIssueData] = useState([]);
 
   function handleShowCommits() {
-    setShowCommits(true);
-    setShowIssues(false);
+    try {
+      setCommitData(getCommitData());
+      setShowCommits(true);
+      setShowIssues(false);
+    } catch (TypeError) {
+      alert("Load some data before trying to show it");
+      console.log("No data loaded yet");
+    }
   }
   
   function handleShowIssues() {
-    setShowCommits(false);
-    setShowIssues(true);
+    try {
+      setIssueData(getIssueData());
+      setShowCommits(false);
+      setShowIssues(true);
+    } catch (TypeError) {
+      alert("Load some data before trying to show it");
+      console.log("No data loaded yet");
+    }
   }
-
 
   return (
     <>  
@@ -40,7 +53,7 @@ function GitLabRepo() {
         <Box maxWidth={"40%"}>
           <FilterFormCommit/>
         </Box>
-        <GitLabCommitTable data={getCommitData()}/>
+        <GitLabCommitTable data={commitData}/>
       </Container> 
       </Box>}
 
@@ -50,7 +63,7 @@ function GitLabRepo() {
             <Box maxWidth={"40%"}>
               <FilterFormIssue/>
             </Box>
-          <GitLabIssueTable data={getIssueData()}/>
+          <GitLabIssueTable data={issueData}/>
         </Container> 
         </Box>}
     </>
