@@ -1,23 +1,23 @@
+import { ClassNames } from "@emotion/react";
 import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
+import React from "react";
 import { useEffect, useState } from "react";
+import { getCommitData } from "../custom-functions/GetData";
 import { printData } from "../custom-functions/Print"
 import { CommitItem, DataItem } from "../interface/DataFormat"
 
 
 type CommitTableProps = {data: CommitItem[]}
 
-function GitLabCommitTable(data: CommitTableProps) {
-    const [commits, setCommits] = useState(Object.values(data).flat());
+class GitLabCommitTable extends React.Component<CommitTableProps, {data: CommitItem[]}> {
+    constructor(props: CommitTableProps) {  
+        super(props);
+        this.state = {data: props.data};
+    }
 
-
-    // Sets data to the table once when the component is mounted
-    useEffect(() => {
-        setCommits(Object.values(data).flat())
-    }, [])
-
-  
-    return (
-    <TableContainer className="commitTable" component={Paper} sx={{maxHeight: 600}}>
+    render() {
+      return (
+      <TableContainer className="commitTable" component={Paper} sx={{maxHeight: 600}}>
       <Table aria-label="simple table" stickyHeader>
           <TableHead>
               <TableRow>
@@ -28,7 +28,7 @@ function GitLabCommitTable(data: CommitTableProps) {
               </TableRow>
           </TableHead>
             <TableBody>
-              {commits.map((commit =>
+              {this.state.data.map((commit =>
                     <TableRow
                         key={commit.id}
                         sx={{'&:last-child td, &:last-child th': {border: 0}}}
@@ -44,7 +44,9 @@ function GitLabCommitTable(data: CommitTableProps) {
 
       </Table>
   </TableContainer>
-    )
+    
+      )
+  }
 }
 
 export default GitLabCommitTable
