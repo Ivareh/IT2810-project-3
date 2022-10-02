@@ -2,7 +2,7 @@ import TextField from '@mui/material/TextField';
 import SendIcon from '@mui/icons-material/Send';
 import Button from '@mui/material/Button';
 import {useState} from "react";
-import {Box, Grid} from '@mui/material';
+import {Box} from '@mui/material';
 
 
 export default function InputForm() {
@@ -89,6 +89,7 @@ export default function InputForm() {
                 />
                 <Box ml={1}>
                     <Button
+                        data-testid={'get'}
                         variant="contained"
                         type={'submit'}
                         endIcon={<SendIcon/>}>
