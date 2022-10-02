@@ -14,7 +14,7 @@ function GitLabRepo() {
   const [commitData, setCommitData] = useState([]);
   const [issueData, setIssueData] = useState([]);
   const [filterType, setFilterType] = useState("title");
-  const [filterValue, setFilterValue] = useState('');h
+  const [filterValue, setFilterValue] = useState('');
 
   function handleShowCommits() {
     try {
