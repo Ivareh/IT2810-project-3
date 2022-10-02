@@ -1,4 +1,4 @@
-import { AppBar, AppBarProps, IconButton, ThemeProvider, Toolbar } from '@mui/material'
+import { AppBar, AppBarProps, IconButton, ThemeProvider, Toolbar, } from '@mui/material'
 import GitLabTheme from '../themes/GitLabTheme'
 import GitLabIcon from './custom-icons/GitLabIcon'
 import Menu from './Menu'

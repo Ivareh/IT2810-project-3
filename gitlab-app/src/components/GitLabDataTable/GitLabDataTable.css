@@ -1,0 +1,12 @@
+.responsiveTable {
+  max-height: 400px;
+  overflow-x: auto;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+@media screen and (max-width: 640px) {
+  .responsiveTable {
+    display: block;
+  }
+}

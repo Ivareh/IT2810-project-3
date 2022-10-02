@@ -1,0 +1,13 @@
+.inputform {
+  display: flex;
+  column-gap: 15px;
+  flex-flow: nowrap;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 640px) {
+    .inputform {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+}
