@@ -6,16 +6,17 @@ import GitLabRepo from './components/GitLabRepo';
 import SampleCommitData from './components/data/SampleCommitData';
 /* import {CommitItem} from './components/interface/DataFormat'; */
 import React from 'react';
+import GitLab from './components/GitLab';
 
 
 function App() {
   return (
+    // Displayed in routes for future implementation of multiple pages, e.g. data visualisation
     <Router>
       <CssBaseline/>
       <Header/>
       <Routes>
-        <Route path="/" element={<GitLabRepoDataLoader/>}/>
-        <Route path="/gitlab-repo" element={<GitLabRepo/>}/>
+        <Route path="/" element={<GitLab/>}/>
       </Routes>
 
     </Router>
