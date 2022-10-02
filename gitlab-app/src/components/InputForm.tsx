@@ -2,14 +2,13 @@ import TextField from '@mui/material/TextField';
 import SendIcon from '@mui/icons-material/Send';
 import Button from '@mui/material/Button';
 import {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import { Box, Grid } from '@mui/material';
 
 
 export default function InputForm() {
     const [domain, setDomain] = useState('https://gitlab.stud.idi.ntnu.no/api/v4/projects/')
     const [projectId, setProjectId] = useState('17598')
     const [token, setToken] = useState('glpat-2vnnyXYGFDt9YKYu5QYW')
-    const navigate = useNavigate()
 
 
     const handleSubmit = async (e: { preventDefault: () => void; }) => {
@@ -19,8 +18,7 @@ export default function InputForm() {
             alert('Data loaded!'))
 
         fetchIssues().then((data) => localStorage.setItem('issues',
-            JSON.stringify(data))).then(() =>
-            navigate('/gitlab-repo'))
+            JSON.stringify(data)))
     }
 
 
@@ -56,45 +54,47 @@ export default function InputForm() {
     }
 
     return (
-        <div>
-            <form
-                onSubmit={handleSubmit}
-                style={{display: "flex", flexFlow: 'row nowrap'}}>
+        <form
+            onSubmit={handleSubmit}
+            style={{display: "flex", flexFlow: 'row nowrap'}}>
+            <Box display="inline-flex" justifyItems={"center"} alignItems={"center"}>
                 <TextField id="outlined-search"
-                           fullWidth
-                           label="Domain"
-                           type="text"
-                           value={domain}
-                           onChange={(event) => {
-                               setDomain(event.target.value as string)
-                           }}
+                        fullWidth
+                        label="Domain"
+                        type="text"
+                        value={domain}
+                        onChange={(event) => {
+                            setDomain(event.target.value as string)
+                        }}
                 />
                 <TextField id="gitlab-id"
-                           label="Project id"
-                           sx={{minWidth: '100px'}}
-                           type="number"
-                           value={projectId}
-                           onChange={(event) => {
-                               setProjectId(event.target.value as string)
-                           }}
+                        label="Project id"
+                        sx={{minWidth: '100px'}}
+                        type="number"
+                        value={projectId}
+                        onChange={(event) => {
+                            setProjectId(event.target.value as string)
+                        }}
                 />
                 <TextField id="outlined-search"
-                           fullWidth
-                           label="Token"
-                           type="text"
-                           value={token}
-                           onChange={(event) => {
-                               setToken(event.target.value as string)
-                           }}
+                        fullWidth
+                        label="Token"
+                        type="text"
+                        value={token}
+                        onChange={(event) => {
+                            setToken(event.target.value as string)
+                        }}
                 />
-                <Button
-                    variant="contained"
-                    type={'submit'}
-                    endIcon={<SendIcon/>}>
-                    Get
-                </Button>
-            </form>
-        </div>
+                <Box ml={1}>
+                    <Button
+                        variant="contained"
+                        type={'submit'}
+                        endIcon={<SendIcon/>}>
+                        Get
+                    </Button>
+                </Box>
+            </Box>
+        </form>
     )
 
 }
