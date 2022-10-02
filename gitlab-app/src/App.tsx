@@ -8,6 +8,7 @@ import SampleCommitData from './components/data/SampleCommitData';
 import React from 'react';
 import {ColorModeProvider} from "./components/contexts/ColorMode";
 import SwapModes from "./components/SwapModes";
+import GitLab from './components/GitLab';
 
 
 function App() {
