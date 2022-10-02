@@ -6,20 +6,22 @@ import GitLabRepo from './components/GitLabRepo';
 import SampleCommitData from './components/data/SampleCommitData';
 /* import {CommitItem} from './components/interface/DataFormat'; */
 import React from 'react';
-import GitLab from './components/GitLab';
+import {ColorModeProvider} from "./components/contexts/ColorMode";
+import SwapModes from "./components/SwapModes";
 
 
 function App() {
   return (
-    // Displayed in routes for future implementation of multiple pages, e.g. data visualisation
+      <ColorModeProvider>
     <Router>
       <CssBaseline/>
       <Header/>
       <Routes>
         <Route path="/" element={<GitLab/>}/>
       </Routes>
-
     </Router>
+        <SwapModes/>
+      </ColorModeProvider>
   ); 
 }
 
