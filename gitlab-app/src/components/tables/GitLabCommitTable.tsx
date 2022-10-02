@@ -1,7 +1,7 @@
 import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
 import { useEffect, useState } from "react";
-import { printData } from "./custom-functions/Print"
-import { CommitItem, DataItem } from "./interface/DataFormat"
+import { printData } from "../custom-functions/Print"
+import { CommitItem, DataItem } from "../interface/DataFormat"
 
 
 type CommitTableProps = {data: CommitItem[]}
@@ -17,8 +17,7 @@ function GitLabCommitTable(data: CommitTableProps) {
 
   
     return (
-    <TableContainer component={Paper} sx={{maxHeight: 400}}>
-    <button onClick={() => printData()}>Print data size</button>
+    <TableContainer component={Paper} sx={{maxHeight: 600}}>
       <Table aria-label="simple table" stickyHeader>
           <TableHead>
               <TableRow>
@@ -38,7 +37,7 @@ function GitLabCommitTable(data: CommitTableProps) {
                         <TableCell>{commit.author_name}</TableCell>
                         <TableCell>{commit.committer_name}</TableCell>
                         <TableCell
-                            align='center'>{commit.committed_date}</TableCell>
+                            align='center' width={200}>{commit.committed_date.split("T")[0]}</TableCell>
                     </TableRow>
                 ))}
             </TableBody>

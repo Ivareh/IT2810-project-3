@@ -80,13 +80,6 @@ export default function PositionedMenu() {
               <Typography>GitLab Repo Dataloader</Typography>
             )}
           </MenuItem>
-          <MenuItem onClick={(e) => handleCloseWithPath("/gitlab-repo")}>
-            {isGitLabRepo ? (
-            <Typography fontWeight={500}>GitLab Repo</Typography>
-            ) : (
-            <Typography>GitLab Repo</Typography>
-            )}
-            </MenuItem>
         </Menu>
 
       </ThemeProvider>

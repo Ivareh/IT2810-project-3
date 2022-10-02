@@ -17,8 +17,7 @@ function App() {
       <CssBaseline/>
       <Header/>
       <Routes>
-        <Route path="/" element={<GitLabRepoDataLoader/>}/>
-        <Route path="/gitlab-repo" element={<GitLabRepo/>}/>
+        <Route path="/" element={<GitLab/>}/>
       </Routes>
     </Router>
         <SwapModes/>

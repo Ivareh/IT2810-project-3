@@ -1,7 +1,7 @@
 import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
 import { useEffect, useState } from "react";
-import { printData } from "./custom-functions/Print"
-import { DataItem, IssueItem } from "./interface/DataFormat"
+import { printData } from "../custom-functions/Print"
+import { DataItem, IssueItem } from "../interface/DataFormat"
 
 
 type IssueTableProps = {data: IssueItem[]}
@@ -17,8 +17,7 @@ function GitLabIssueTable(data: IssueTableProps) {
 
   
     return (
-    <TableContainer component={Paper} sx={{maxHeight: 400}}>
-    <button onClick={() => printData()}>Print data size</button>
+    <TableContainer component={Paper} sx={{maxHeight: 600}}>
       <Table aria-label="simple table" stickyHeader>
           <TableHead>
               <TableRow>
@@ -34,11 +33,11 @@ function GitLabIssueTable(data: IssueTableProps) {
                         key={issue.id}
                         sx={{'&:last-child td, &:last-child th': {border: 0}}}
                     >
-                        <TableCell width={600}>{issue.title}</TableCell>
+                        <TableCell width={300}>{issue.title}</TableCell>
                         <TableCell>{issue.description}</TableCell>
                         <TableCell>{issue.state}</TableCell>
                         <TableCell
-                            align='center'>{issue.created_at}</TableCell>
+                            align='center' width={200}>{issue.created_at.split("T")[0]}</TableCell>
                     </TableRow>
                 ))}
             </TableBody>

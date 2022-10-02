@@ -1,4 +1,4 @@
-import { CommitItem } from "./interface/DataFormat"
+import { CommitItem } from "../interface/DataFormat"
 
 export function filterById(data : CommitItem[], id : string) {
   let filtered = data.filter(e => e.id.toString() == id)
