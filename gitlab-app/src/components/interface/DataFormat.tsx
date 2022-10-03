@@ -2,6 +2,7 @@ export interface DataItem {
   id: number;
 }
 
+// Parameters we want from commit data from GitLab API
 export interface CommitItem extends DataItem {
   title: string;
   author_name: string;
@@ -9,6 +10,7 @@ export interface CommitItem extends DataItem {
   committed_date: string;
 }
 
+// Parameters we want from issue data from GitLab API
 export interface IssueItem extends DataItem {
   title: string;
   description: string;
@@ -16,6 +18,7 @@ export interface IssueItem extends DataItem {
   created_at: string;
 }
 
+// Strings that represent the keys of the commit data we want from GitLab API
 export class CommitKeys {
   public static readonly ID = "id";
   public static readonly TITLE = "title";
@@ -24,6 +27,7 @@ export class CommitKeys {
   public static readonly COMMITTED_DATE = "committed_date";
 }
 
+// Strings that represent the keys of the issue data we want from GitLab API
 export class IssueKeys {
   public static readonly ID = "id";
   public static readonly TITLE = "title";

@@ -11,6 +11,7 @@ export interface FilterFormProps {
   handleClick: (filterType: string, filterValue: string) => void;
 }
 
+// Input form for filtering issues
 export default function FilterFormIssue(props: FilterFormProps) {
   const [filterType, setFilterType] = useState("title");
   const [filterValue, setFilterValue] = useState("");
