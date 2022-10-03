@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, MouseEventHandler} from 'react';
 import Button from '@mui/material/Button';
 import {Box} from "@mui/system"
 import InputLabel from '@mui/material/InputLabel';
@@ -12,31 +12,9 @@ export interface FilterFormProps {
     handleClick: (filterType: string, filterValue: string) => void;
 }
 
-
 export default function FilterFormIssue(props: FilterFormProps) {
-    const [filterType, setFilterType] = useState('')
+    const [filterType, setFilterType] = useState('title')
     const [filterValue, setFilterValue] = useState('')
-
-
-    const handleChangeFilterValue = (event: { target: { value: React.SetStateAction<string>; }; }) => {
-        const tmp = event.target.value;
-        setFilterValue(tmp);
-    };
-
-    useEffect(() => {
-    });
-
-    const handleChangeFilterType = (event: { target: { value: React.SetStateAction<string>; }; }) => {
-        const tmp = event.target.value;
-        setFilterType(tmp);
-    };
-
-    const sendFilterValues = () => {
-        console.log(filterType);
-        console.log(filterValue);
-        console.log("button");
-
-    };
 
     return (
         <Box minWidth={"100%"} display="inline-flex" alignItems={"center"}>

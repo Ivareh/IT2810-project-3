@@ -1,6 +1,6 @@
-import { CommitItem } from "../interface/DataFormat"
+import { CommitItem, CommitKey } from "../interface/DataFormat"
 
-export function filterById(data : CommitItem[], id : string) {
+function filterById(data : CommitItem[], id : string) {
   let filtered = data.filter(e => e.id.toString() == id)
   if (filtered.length == 0) {
     throw new Error("No data found")
@@ -8,16 +8,17 @@ export function filterById(data : CommitItem[], id : string) {
   return filtered
 }
 
-export function filterByTitle(data : CommitItem[], title : string) {
-  let filtered = data.filter(e => e.title.toLowerCase().includes(title.toLocaleLowerCase()))
+function filterByCommitTitle(data : CommitItem[], title : string) {
+  let filtered = data.filter(e => e.title.toLowerCase().includes(title.toLowerCase()))
   if (filtered.length == 0) {
     throw new Error("No data found")
   }
   return filtered
 }
 
-export function filterByAuthor(data : CommitItem[], author_name : string) {
-  let filtered = data.filter(e => e.author_name.toLowerCase().includes(author_name.toLowerCase()))
+function filterByCommitAuthor(data : CommitItem[], Author : string) {
+  let filtered = data.filter(e => e.author_name.toLowerCase().includes(Author.toLowerCase()))
+  console.log(Author)
   if (filtered.length == 0) {
     throw new Error("No data found")
   }
@@ -25,19 +26,34 @@ export function filterByAuthor(data : CommitItem[], author_name : string) {
 }
 
 
-export function filterByCommitter(data : CommitItem[], committer : string) {
-  let filtered = data.filter(e => e.committer_name.toLowerCase().includes(committer.toLowerCase()))
+function filterByCommitCommitter(data : CommitItem[], Committer : string) {
+  let filtered = data.filter(e => e.committer_name.toLowerCase().includes(Committer.toLowerCase()))
   if (filtered.length == 0) {
     throw new Error("No data found")
   }
   return filtered
 }
 
-export function filterByDate(data : CommitItem[], Date : string) {
-  let filtered = data.filter(e => e.committed_date.includes(Date))
+function filterByCommitDate(data : CommitItem[], Date : string) {
+  let filtered = data.filter(e => e.committed_date.toLowerCase().includes(Date.toLowerCase()))
   if (filtered.length == 0) {
     throw new Error("No data found")
   }
   return filtered
 }
 
+export function filterByCommit(data : CommitItem[], filterType: string, filterValue: string){
+  switch(filterType){
+    case CommitKey.ID:
+      return filterById(data, filterValue)
+    case CommitKey.TITLE:
+      return filterByCommitTitle(data, filterValue)
+    case CommitKey.AUTHOR_NAME:
+      console.log(filterType, filterValue)
+      return filterByCommitAuthor(data, filterValue)
+    case CommitKey.COMMITTER_NAME:
+      return filterByCommitCommitter(data, filterValue)
+    case CommitKey.COMMITTED_DATE:
+      return filterByCommitDate(data, filterValue)
+  }
+}
