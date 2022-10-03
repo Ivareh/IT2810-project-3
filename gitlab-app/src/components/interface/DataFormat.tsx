@@ -16,7 +16,7 @@ export interface IssueItem extends DataItem {
   created_at: string;
 }
 
-export class CommitKey {
+export class CommitKeys {
   public static readonly ID = "id";
   public static readonly TITLE = "title";
   public static readonly AUTHOR_NAME = "author_name";
@@ -24,7 +24,7 @@ export class CommitKey {
   public static readonly COMMITTED_DATE = "committed_date";
 }
 
-export class IssueKey {
+export class IssueKeys {
   public static readonly ID = "id";
   public static readonly TITLE = "title";
   public static readonly DESCRIPTION = "description";
