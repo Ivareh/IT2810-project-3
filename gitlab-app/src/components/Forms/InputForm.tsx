@@ -60,7 +60,7 @@ export default function InputForm() {
             <Box display="inline-flex" justifyItems={"center"}
                  alignItems={"center"}>
                 <TextField id="outlined-search"
-                           data-testid={'domain'}
+                           inputProps={{ "data-testid": "domain" }}
                            fullWidth
                            label="Domain"
                            type="text"
@@ -70,6 +70,7 @@ export default function InputForm() {
                            }}
                 />
                 <TextField id="gitlab-id"
+                           inputProps={{ "data-testid": "gitlab-id" }}
                            label="Project id"
                            sx={{minWidth: '100px'}}
                            type="number"
@@ -79,6 +80,7 @@ export default function InputForm() {
                            }}
                 />
                 <TextField id="outlined-search"
+                           inputProps={{ "data-testid": "token" }}
                            fullWidth
                            label="Token"
                            type="text"
