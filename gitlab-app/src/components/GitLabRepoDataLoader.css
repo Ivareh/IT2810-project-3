@@ -1,0 +1,106 @@
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0px;
+    grid-column: fullWidth;
+    gap: 185px;
+}
+
+#input h2 {
+  font-size: 28px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: -90px;
+  text-align: center;
+}
+
+#repoTable h2 {
+  font-size: 28px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-device-width: 1024px){
+  #container {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+    width: 40%;
+    margin-right: 90px;
+    margin-left: 90px;
+  } #input{
+    margin-left: 150px;
+  } #input h2 {
+    margin-right: 110px;
+  }
+  #repoTable {
+    margin-left: auto;
+  }
+}
+
+/* tablet */
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    
+    margin-left: 90px;
+  }
+}
+
+@media screen and (min-device-width: 481px)
+and (max-device-width: 768px) {
+  #repoTable {
+    margin-left: auto;
+    
+  } #input {
+    justify-content: center;
+    margin-left: 95px;
+    margin-top: 80px;
+  
+  } #input h2 {
+    text-align: left;
+  } 
+  #repoTable h2 {
+    text-align: left;
+    margin-left: 25px;
+    
+  }
+}
+
+/* phone */
+@media screen and (max-device-width: 480px){
+  #container {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+    margin-right: 90px;
+    margin-left: 90px;
+  }
+}
+
+@media screen and (max-device-width: 480px) {
+  #repoTable {
+    justify-content: center;
+    margin-top: 50px;
+    margin-right: 150px;
+    margin-left: -90px;
+  } #input {
+    justify-content: center;
+    margin-top: 80px;
+    margin-left: 20px;
+    width: 40%;
+  } #repoTable h2 {
+    text-align: left;
+  }
+}

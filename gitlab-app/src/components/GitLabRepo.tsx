@@ -1,4 +1,4 @@
-import { Container, Typography, Button, Grid } from "@mui/material"
+import { Container, Button, Grid } from "@mui/material"
 import { Box } from "@mui/system"
 import FilterFormCommit from "./filter/FilterFormCommit"
 import FilterFormIssue from "./filter/FilterFormIssue"
@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import GitLabCommitTable from "./tables/GitLabCommitTable"
 import { getCommitData, getIssueData } from "./custom-functions/GetData"
 import GitLabIssueTable from "./tables/GitLabIssueTable"
+
 
 /* Displays Git Lab Data after it is loaded in a table with parameters*/
 function GitLabRepo() {
@@ -49,7 +50,26 @@ function GitLabRepo() {
 
   return (
     <>  
-      <Grid container direction={"row"} spacing={20} wrap={"nowrap"} justifyContent={"center"} mb={10}>
+      
+      {showCommits && <Box mb={5}>
+      <Container maxWidth="lg">
+        <Box maxWidth={"50%"}>
+          <FilterFormCommit/>
+        </Box>
+        <GitLabCommitTable data={commitData}/>
+      </Container> 
+      </Box>}
+
+      {showIssues && <Box mb={5}>
+          <Container maxWidth="lg">
+            <Box maxWidth={"50%"}>
+              <FilterFormIssue/>
+            </Box>
+          <GitLabIssueTable data={issueData}/>
+        </Container> 
+        </Box>}
+
+        <Grid container direction={"row"} spacing={10} wrap={"nowrap"} justifyContent={"center"} mb={1}>
         <Grid item>
           <Button variant="contained" onClick={() => handleShowCommits()}>Commits</Button>
         </Grid>
@@ -57,26 +77,6 @@ function GitLabRepo() {
           <Button variant="contained" onClick={() => handleShowIssues()}>Issues</Button>
         </Grid>
       </Grid>
-
-      {showCommits && <Box mb={28}>
-      <Container maxWidth="lg">
-        <Typography mb={5} variant="h5" fontWeight={"bold"} align="left">Commits</Typography>
-        <Box maxWidth={"40%"}>
-          <FilterFormCommit/>
-        </Box>
-        <GitLabCommitTable data={commitData}/>
-      </Container> 
-      </Box>}
-
-      {showIssues && <Box mb={28}>
-          <Container maxWidth="lg">
-            <Typography mb={5} variant="h5" fontWeight={"bold"} align="left">Issues</Typography>
-            <Box maxWidth={"40%"}>
-              <FilterFormIssue/>
-            </Box>
-          <GitLabIssueTable data={issueData}/>
-        </Container> 
-        </Box>}
     </>
   )
 }

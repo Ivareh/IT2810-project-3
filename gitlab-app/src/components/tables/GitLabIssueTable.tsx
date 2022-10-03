@@ -17,8 +17,8 @@ function GitLabIssueTable(data: IssueTableProps) {
 
   
     return (
-    <TableContainer component={Paper} sx={{maxHeight: 600}}>
-      <Table aria-label="simple table" stickyHeader>
+    <TableContainer className="issueTable" component={Paper} sx={{maxHeight: 350}}>
+      <Table id="iTable" aria-label="simple table" stickyHeader style={{ width: 600}}>
           <TableHead>
               <TableRow>
                   <TableCell>Title</TableCell>
@@ -33,11 +33,11 @@ function GitLabIssueTable(data: IssueTableProps) {
                         key={issue.id}
                         sx={{'&:last-child td, &:last-child th': {border: 0}}}
                     >
-                        <TableCell width={300}>{issue.title}</TableCell>
+                        <TableCell width={400}>{issue.title}</TableCell>
                         <TableCell>{issue.description}</TableCell>
                         <TableCell>{issue.state}</TableCell>
                         <TableCell
-                            align='center' width={200}>{issue.created_at.split("T")[0]}</TableCell>
+                            align='center' width={400}>{issue.created_at.split("T")[0]}</TableCell>
                     </TableRow>
                 ))}
             </TableBody>

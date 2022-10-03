@@ -1,0 +1,132 @@
+#header {
+    background: url(./assets/images/bakgrunnsbilde.jpg) no-repeat 
+    fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+}
+#logo {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  height: 150px;
+}
+
+#icon {
+  height: 100px;
+  position: absolute;
+  left: 35px;
+  top: 10px;
+}
+
+#navigationMenu {
+  direction: column;
+  justify-content: center;
+}
+
+#about {
+  text-decoration: none;
+  color: white;
+  font-weight: thin;
+  font-size: 19px;
+  letter-spacing: 2px;
+}
+
+#loader {
+  text-decoration: none;
+  color: white;
+  font-weight: thin;
+  font-size: 19px;
+  letter-spacing: 2px;
+}
+
+#mainText h1 {
+  margin-top: 300px;
+  margin-bottom: 0px;
+  position: absolute;
+  text-decoration: none;
+  color: #ff5c40;
+  font-weight: bold;
+  font-size: 70px;
+  letter-spacing: 1.5px;
+}
+
+#mainText p {
+  margin-top: 440px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  font-weight: thin;
+}
+
+#menu {
+  display: flex;
+  direction: column;
+  justify-content: center;
+}
+
+/* MEDIA QUERIES */
+
+/* Inspo for the background image in header: 
+https://stackoverflow.com/questions/71606496/background-image-header-media-queries*/
+
+@media screen and (max-device-width: 1024px) {
+    #header {
+        background: url(./assets/images/bakgrunnsbilde.jpg) no-repeat center center
+          fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        display: block;
+      } #header h1 {
+        font-size: 35px;
+        margin-bottom: 280px;
+      } #header p {
+        font-size: 12px;
+        margin-bottom: 350px;
+      }
+  
+}
+
+/* tablet */
+
+@media screen and (min-device-width: 481px) and (max-device-width: 768px){
+  #header {
+    background: url(./assets/images/bakgrunnsbilde.jpg) no-repeat center center
+      fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: block;
+  } #header h1 {
+    font-size: 35px;
+    margin-bottom: 280px;
+  } #header p {
+    font-size: 12px;
+    margin-bottom: 350px;
+  }
+}
+
+/* phone */
+
+@media screen and (max-device-width: 480px) {
+  #header {
+    background: url(./assets/images/bakgrunnsbilde.jpg) no-repeat center center
+      fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: block;
+  } #header h1 {
+    font-size: 40px;
+  } #header p {
+    font-size: 12px;
+  }
+}
+

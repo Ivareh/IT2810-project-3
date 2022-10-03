@@ -10,7 +10,7 @@ function GitLab() {
             <GitLabRepoDataLoader/>
         </Box>
         <Box>
-            <GitLabRepo/>
+           {/* <GitLabRepo/>*/} 
         </Box>
     </Container>
   )

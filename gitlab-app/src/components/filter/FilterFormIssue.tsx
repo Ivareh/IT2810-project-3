@@ -1,26 +1,30 @@
-import { useState, useEffect} from 'react';
-import Button from '@mui/material/Button';
-import { Box } from "@mui/system"
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import TextField from '@mui/material/TextField';
-import { Container } from '@mui/material';
+import { useState, useEffect } from "react";
+import Button from "@mui/material/Button";
+import {Grid} from "@mui/material";
+import { Box } from "@mui/system";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import TextField from "@mui/material/TextField";
+import { Container } from "@mui/material";
 
 export default function BasicSelect() {
   const [filterType, setFilterType] = useState("title");
-  const [filterValue, setFilterValue] = useState('');
+  const [filterValue, setFilterValue] = useState("");
 
-  const handleChangeFilterValue = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+  const handleChangeFilterValue = (event: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
     const tmp = event.target.value;
     setFilterValue(tmp);
   };
 
-  useEffect(()=>{
-  });
+  useEffect(() => {});
 
-  const handleChangeFilterType = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+  const handleChangeFilterType = (event: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
     const tmp = event.target.value;
     setFilterType(tmp);
   };
@@ -32,14 +36,30 @@ export default function BasicSelect() {
   };
 
   return (
-    <Box minWidth={"100%"} display="inline-flex" alignItems={"center"}>
-      <Box minWidth={"30%"} >
-        <FormControl fullWidth >
+    <Box
+      minWidth={"100%"}
+      display="inline-flex"
+      alignItems={"center"}
+      style={{ marginTop: "50px" }}
+    >
+      <h6
+        style={{
+          fontWeight: "bold",
+          fontSize: "17px",
+          marginRight: "40px",
+          marginBottom: "0px",
+        }}
+      >
+        Issues
+      </h6>
+      <Box minWidth={"65%"}>
+        <FormControl fullWidth>
           <InputLabel>Filtertype</InputLabel>
           <Select
-          value={filterType}
-          label="Filtertype"
-          onChange={handleChangeFilterType}
+            value={filterType}
+            label="Filtertype"
+            variant="standard"
+            onChange={handleChangeFilterType}
           >
             <MenuItem value={"title"}>Title</MenuItem>
             <MenuItem value={"description"}>Description</MenuItem>
@@ -48,23 +68,20 @@ export default function BasicSelect() {
           </Select>
         </FormControl>
       </Box>
-      <Box minWidth={"70%"} >
+      <Box minWidth={"65%"}>
         <TextField
           fullWidth
           label="Value"
           type="text"
+          variant="standard"
           onChange={handleChangeFilterValue}
         />
       </Box>
-
       <Box justifyContent="flex-end" ml={1}>
-          <Button variant="contained"
-            onClick={sendFilterValues}
-          >
+        <Button variant="contained" onClick={sendFilterValues}>
           Filter
-          </Button>
+        </Button>
       </Box>
-        
-  </Box>
+    </Box>
   );
 }

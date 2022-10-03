@@ -6,6 +6,7 @@ import {useNavigate} from 'react-router-dom'
 
 
 
+
 /* Customised App Bar */
 function GitLabAppBar(props: AppBarProps){ {
   const navigate = useNavigate()

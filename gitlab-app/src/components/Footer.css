@@ -1,0 +1,12 @@
+/* MEDIA QUERIES */
+
+/* phone */
+
+@media screen and (max-device-width: 640px){
+    #footerContainer {
+        justify-content: center;
+        margin-left: 145px;
+        gap: 10px;
+      }
+  }
+

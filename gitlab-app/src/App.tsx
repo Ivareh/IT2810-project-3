@@ -1,6 +1,8 @@
 import { CssBaseline } from '@mui/material';
 import {BrowserRouter, BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Header from './components/Header';
+import About from './components/About';
+import Footer from './components/Footer';
 import GitLabRepoDataLoader from './components/GitLabRepoDataLoader';
 import GitLabRepo from './components/GitLabRepo';
 import SampleCommitData from './components/data/SampleCommitData';
@@ -17,11 +19,12 @@ function App() {
     <Router>
       <CssBaseline/>
       <Header/>
+      <About/>
       <Routes>
         <Route path="/" element={<GitLab/>}/>
       </Routes>
     </Router>
-        <SwapModes/>
+        <Footer/>
       </ColorModeProvider>
   ); 
 }

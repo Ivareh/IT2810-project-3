@@ -4,6 +4,7 @@ import { printData } from "../custom-functions/Print"
 import { CommitItem, DataItem } from "../interface/DataFormat"
 
 
+
 type CommitTableProps = {data: CommitItem[]}
 
 function GitLabCommitTable(data: CommitTableProps) {
@@ -17,8 +18,8 @@ function GitLabCommitTable(data: CommitTableProps) {
 
   
     return (
-    <TableContainer className="commitTable" component={Paper} sx={{maxHeight: 600}}>
-      <Table aria-label="simple table" stickyHeader>
+    <TableContainer className="commitTable" component={Paper} sx={{maxHeight: 350}}>
+      <Table id="cTable" aria-label="simple table" stickyHeader>
           <TableHead>
               <TableRow>
                   <TableCell>Title</TableCell>
@@ -33,7 +34,7 @@ function GitLabCommitTable(data: CommitTableProps) {
                         key={commit.id}
                         sx={{'&:last-child td, &:last-child th': {border: 0}}}
                     >
-                        <TableCell width={600}>{commit.title}</TableCell>
+                        <TableCell width={100}>{commit.title}</TableCell>
                         <TableCell>{commit.author_name}</TableCell>
                         <TableCell>{commit.committer_name}</TableCell>
                         <TableCell
