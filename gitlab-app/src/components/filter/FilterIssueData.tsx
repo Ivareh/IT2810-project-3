@@ -1,5 +1,6 @@
-import { IssueItem, IssueKey } from "../interface/DataFormat";
+import { IssueItem, IssueKeys } from "../interface/DataFormat";
 
+// Filter data by id
 function filterByIssueId(data: IssueItem[], id: string) {
   let filtered = data.filter((e) => e.id.toString() == id);
   if (filtered.length == 0) {
@@ -8,17 +9,18 @@ function filterByIssueId(data: IssueItem[], id: string) {
   return filtered;
 }
 
+// Filter data by title
 function filterByIssueTitle(data: IssueItem[], title: string) {
   let filtered = data.filter((e) =>
     e.title.toLowerCase().includes(title.toLocaleLowerCase())
   );
-  console.log("hey");
   if (filtered.length == 0) {
     throw new Error("No data found");
   }
   return filtered;
 }
 
+// Filter data by description
 function filterByIssueAuthor(data: IssueItem[], description: string) {
   let filtered = data.filter((e) =>
     e.description.toLowerCase().includes(description.toLowerCase())
@@ -29,7 +31,8 @@ function filterByIssueAuthor(data: IssueItem[], description: string) {
   return filtered;
 }
 
-function filterByIssueCommitter(data: IssueItem[], state: string) {
+// Filter data by state
+function filterByIssueState(data: IssueItem[], state: string) {
   let filtered = data.filter((e) =>
     e.state.toLowerCase().includes(state.toLowerCase())
   );
@@ -39,6 +42,7 @@ function filterByIssueCommitter(data: IssueItem[], state: string) {
   return filtered;
 }
 
+// Filter data by created date
 function filterByIssueDate(data: IssueItem[], Date: string) {
   let filtered = data.filter((e) =>
     e.created_at.toLowerCase().includes(Date.toLowerCase())
@@ -49,24 +53,23 @@ function filterByIssueDate(data: IssueItem[], Date: string) {
   return filtered;
 }
 
+// Export Function to filter data by filter type and filter value
 export function filterByIssue(
   data: IssueItem[],
   filterType: string,
   filterValue: string
 ) {
   switch (filterType) {
-    case IssueKey.ID:
+    case IssueKeys.ID:
       return filterByIssueId(data, filterValue);
-    case IssueKey.TITLE:
+    case IssueKeys.TITLE:
       const hey = filterByIssueTitle(data, filterValue);
-      console.log("THIS IS HEY");
-      console.log(hey);
       return hey;
-    case IssueKey.DESCRIPTION:
+    case IssueKeys.DESCRIPTION:
       return filterByIssueAuthor(data, filterValue);
-    case IssueKey.STATE:
-      return filterByIssueCommitter(data, filterValue);
-    case IssueKey.CREATED_AT:
+    case IssueKeys.STATE:
+      return filterByIssueState(data, filterValue);
+    case IssueKeys.CREATED_AT:
       return filterByIssueDate(data, filterValue);
   }
 }
