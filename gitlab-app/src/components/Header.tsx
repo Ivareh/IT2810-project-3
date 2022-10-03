@@ -1,14 +1,12 @@
-import GitLabAppBar from './GitLabAppBar';
-
+import GitLabAppBar from "./GitLabAppBar";
 
 // Header of the application
 function Header() {
-  return(
+  return (
     <div>
-      <GitLabAppBar position='relative'> </GitLabAppBar>
+      <GitLabAppBar position="relative"> </GitLabAppBar>
     </div>
   );
 }
-
 
 export default Header;
