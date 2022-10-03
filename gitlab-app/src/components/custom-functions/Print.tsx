@@ -1,6 +1,3 @@
-
-
-
 // Prints data size of the commits and issues from local storage
 export const printData: () => void = () => {
     if (localStorage.getItem('commits') || localStorage.getItem('issues')) {
