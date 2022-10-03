@@ -8,13 +8,13 @@ export function getInitialData(data: string): DataItem[] {
   return [];
 }
 
-// We wanted to have an object with parameters of interest, so this method creates a list with new commit objects with only the parameters we want.
+// Gets commit data and returns it as an array of CommitItem
 export function getCommitData(): CommitItem[] {
   const initialCommitData = getInitialData("commits") as CommitItem[];
   return Object.values(initialCommitData);
 }
 
-// We wanted to have an object with parameters of interest, so this method creates a list with new objects with only the parameters we want.
+// Gets issue data and returns it as an array of IssueItem
 export function getIssueData(): IssueItem[] {
   const initialIssueData = getInitialData("issues") as IssueItem[];
   return Object.values(initialIssueData);
