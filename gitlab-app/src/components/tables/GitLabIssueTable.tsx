@@ -1,21 +1,19 @@
+import { ClassNames } from "@emotion/react";
 import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
 import React from "react";
 import { useEffect, useState } from "react";
+import { getCommitData } from "../custom-functions/GetData";
 import { printData } from "../custom-functions/Print"
-import { DataItem, IssueItem } from "../interface/DataFormat"
+import { IssueItem } from "../interface/DataFormat"
 
 
-type IssueTableProps = {data: IssueItem[]}
+type CommitTableProps = {data: IssueItem[]}
 
-class GitLabIssueTable extends React.Component<IssueTableProps, {data: IssueItem[]}> {
-    constructor(props: IssueTableProps) {
-        super(props);
-        this.state = {data: props.data};
-    }
-    
+class GitLabCommitTable extends React.Component<CommitTableProps> {
+
     render() {
-        return (
-    <TableContainer component={Paper} sx={{maxHeight: 600}}>
+      return (
+      <TableContainer className="commitTable" component={Paper} sx={{maxHeight: 600}}>
       <Table aria-label="simple table" stickyHeader>
           <TableHead>
               <TableRow>
@@ -26,12 +24,12 @@ class GitLabIssueTable extends React.Component<IssueTableProps, {data: IssueItem
               </TableRow>
           </TableHead>
             <TableBody>
-              {this.state.data.map((issue =>
+              {this.props.data.map((issue =>
                     <TableRow
                         key={issue.id}
                         sx={{'&:last-child td, &:last-child th': {border: 0}}}
                     >
-                        <TableCell width={300}>{issue.title}</TableCell>
+                        <TableCell width={600}>{issue.title}</TableCell>
                         <TableCell>{issue.description}</TableCell>
                         <TableCell>{issue.state}</TableCell>
                         <TableCell
@@ -39,10 +37,12 @@ class GitLabIssueTable extends React.Component<IssueTableProps, {data: IssueItem
                     </TableRow>
                 ))}
             </TableBody>
+
       </Table>
   </TableContainer>
+    
       )
   }
 }
 
-export default GitLabIssueTable
+export default GitLabCommitTable

@@ -46,7 +46,10 @@ export function filterByIssue(data : IssueItem[], filterType: string, filterValu
     case IssueKey.ID:
       return filterByIssueId(data, filterValue)
     case IssueKey.TITLE:
-      return filterByIssueTitle(data, filterValue)
+      const hey = filterByIssueTitle(data, filterValue)
+      console.log("THIS IS HEY")
+      console.log(hey)
+      return hey
     case IssueKey.DESCRIPTION:
       return filterByIssueAuthor(data, filterValue)
     case IssueKey.STATE:
