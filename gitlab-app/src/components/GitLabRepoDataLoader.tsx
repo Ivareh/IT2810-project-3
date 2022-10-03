@@ -1,6 +1,6 @@
 import {Box, Container, Typography, TypographyProps} from '@mui/material';
 import GitLabRepo from './GitLabRepo';
-import InputForm from "./InputForm";
+import InputForm from "./Forms/InputForm";
 
 /* Loads GitLab data from a repo*/
 function GitLabRepoDataLoader(props: TypographyProps) {

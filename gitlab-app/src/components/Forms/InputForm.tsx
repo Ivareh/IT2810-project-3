@@ -2,7 +2,7 @@ import TextField from '@mui/material/TextField';
 import SendIcon from '@mui/icons-material/Send';
 import Button from '@mui/material/Button';
 import {useState} from "react";
-import { Box, Grid } from '@mui/material';
+import {Box} from '@mui/material';
 
 
 export default function InputForm() {
@@ -58,36 +58,41 @@ export default function InputForm() {
         <form
             onSubmit={handleSubmit}
             style={{display: "flex", flexFlow: 'row nowrap'}}>
-            <Box display="inline-flex" justifyItems={"center"} alignItems={"center"}>
+            <Box display="inline-flex" justifyItems={"center"}
+                 alignItems={"center"}>
                 <TextField id="outlined-search"
-                        fullWidth
-                        label="Domain"
-                        type="text"
-                        value={domain}
-                        onChange={(event) => {
-                            setDomain(event.target.value as string)
-                        }}
+                           inputProps={{ "data-testid": "domain" }}
+                           fullWidth
+                           label="Domain"
+                           type="text"
+                           value={domain}
+                           onChange={(event) => {
+                               setDomain(event.target.value as string)
+                           }}
                 />
                 <TextField id="gitlab-id"
-                        label="Project id"
-                        sx={{minWidth: '100px'}}
-                        type="number"
-                        value={projectId}
-                        onChange={(event) => {
-                            setProjectId(event.target.value as string)
-                        }}
+                           inputProps={{ "data-testid": "gitlab-id" }}
+                           label="Project id"
+                           sx={{minWidth: '100px'}}
+                           type="number"
+                           value={projectId}
+                           onChange={(event) => {
+                               setProjectId(event.target.value as string)
+                           }}
                 />
                 <TextField id="outlined-search"
-                        fullWidth
-                        label="Token"
-                        type="text"
-                        value={token}
-                        onChange={(event) => {
-                            setToken(event.target.value as string)
-                        }}
+                           inputProps={{ "data-testid": "token" }}
+                           fullWidth
+                           label="Token"
+                           type="text"
+                           value={token}
+                           onChange={(event) => {
+                               setToken(event.target.value as string)
+                           }}
                 />
                 <Box ml={1}>
                     <Button
+                        data-testid={'get'}
                         variant="contained"
                         type={'submit'}
                         endIcon={<SendIcon/>}>
