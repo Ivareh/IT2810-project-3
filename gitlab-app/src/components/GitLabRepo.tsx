@@ -11,13 +11,12 @@ import { filterByAuthor, filterByCommitter, filterByDate, filterByTitle } from "
 
 /* Displays Git Lab Data after it is loaded in a table with parameters*/
 function GitLabRepo() {
-    const [showCommits, setShowCommits] = useState(false);
-    const [showIssues, setShowIssues] = useState(false);
-    const [commitData, setCommitData] = useState([]);
-    const [issueData, setIssueData] = useState([]);
-    const [filterOnKind, setFilterOnKind] = useState("");
-    const [filterOnType, setFilterOnType] = useState("");
-    const [filterOnValue, setFilterOnValue] = useState("");
+  const [showCommits, setShowCommits] = useState(false);
+  const [showIssues, setShowIssues] = useState(false);
+  const [commitData, setCommitData] = useState([]);
+  const [issueData, setIssueData] = useState([]);
+  const [filterType, setFilterType] = useState("title");
+  const [filterValue, setFilterValue] = useState('');
 
 
     const getValues = (filterType: string, filterValue : string) => {
