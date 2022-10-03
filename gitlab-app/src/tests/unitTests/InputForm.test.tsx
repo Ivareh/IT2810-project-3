@@ -1,11 +1,5 @@
 /** @jest-environment jsdom */
-import {
-    cleanup,
-    fireEvent,
-    getByTestId,
-    render,
-    screen
-} from "@testing-library/react";
+import {cleanup, fireEvent, render, screen} from "@testing-library/react";
 import InputForm from "../../components/Forms/InputForm";
 import '@testing-library/jest-dom'
 
@@ -14,6 +8,9 @@ import '@testing-library/jest-dom'
  * Before each test we render the form.
  */
 beforeEach(() => {
+    // Clear local storage
+    localStorage.removeItem('commits')
+    localStorage.removeItem('issues')
     render(
         <InputForm/>);
 });
@@ -31,6 +28,7 @@ test("Check if inputs are being rendered", () => {
     const domain = screen.getByTestId("domain")
     const token = screen.getByTestId("token")
     const id = screen.getByTestId("gitlab-id")
+
     expect(button).toBeInTheDocument()
     expect(domain).toBeInTheDocument()
     expect(token).toBeInTheDocument()
