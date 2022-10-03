@@ -6,18 +6,57 @@ import {useEffect, useState} from 'react'
 import GitLabCommitTable from "./tables/GitLabCommitTable"
 import {getCommitData, getIssueData} from "./custom-functions/GetData"
 import GitLabIssueTable from "./tables/GitLabIssueTable"
+import FilterFormProps from "./filter/FilterFormCommit"
+import { filterByAuthor, filterByCommitter, filterByDate, filterByTitle } from "./filter/FilterCommitData"
 
 /* Displays Git Lab Data after it is loaded in a table with parameters*/
 function GitLabRepo() {
-    const [showCommits, setShowCommits] = useState(false);
-    const [showIssues, setShowIssues] = useState(false);
-    const [commitData, setCommitData] = useState([]);
-    const [issueData, setIssueData] = useState([]);
-    const [filterType, setFilterType] = useState("title");
-    const [filterValue, setFilterValue] = useState('');
+  const [showCommits, setShowCommits] = useState(false);
+  const [showIssues, setShowIssues] = useState(false);
+  const [commitData, setCommitData] = useState([]);
+  const [issueData, setIssueData] = useState([]);
+  const [filterType, setFilterType] = useState("title");
+  const [filterValue, setFilterValue] = useState('');
+
+
+    const getValues = (filterType: string, filterValue : string) => {
+        setCommitData(getCommitData());
+        try{
+            if(filterValue && filterType) {
+                switch(filterType) {
+                    case "":
+                        setCommitData(getCommitData())
+                        break;
+                    case "title":
+                        setCommitData(filterByTitle(getCommitData(), filterValue));
+                        break;
+                    case "author_name":
+                        setCommitData(filterByAuthor(getCommitData(), filterValue));
+                        break;
+                    case "committer_name":
+                        setCommitData(filterByCommitter(getCommitData(), filterValue));
+                        break;
+                    case "committed_date":
+                        setCommitData(filterByDate(getCommitData(), filterValue));
+                        break;
+                }
+            } else {
+                setCommitData(getCommitData())
+            }
+        } catch(e) {
+            setCommitData([])
+            setFilterOnType("")
+            setFilterOnValue("")
+            console.log("Coudln't find data");
+        }
+        sessionStorage.setItem("filterOnType", filterType);
+        sessionStorage.setItem("filterOnValue", filterValue);
+    }
 
     function handleShowCommits() {
         try {
+            setFilterOnKind("commits");
+            sessionStorage.setItem("filterOnKind", "commits");
             setCommitData(getCommitData());
             setShowCommits(true);
             setShowIssues(false);
@@ -34,6 +73,8 @@ function GitLabRepo() {
 
     function handleShowIssues() {
         try {
+            setFilterOnKind("issues");
+            sessionStorage.setItem("filterOnKind", "issues");
             setIssueData(getIssueData());
             setShowCommits(false);
             setShowIssues(true);
@@ -43,9 +84,7 @@ function GitLabRepo() {
         }
     }
 
-    useEffect(() => {
-        console.log("GitLabRepo");
-    });
+
 
     return (
         <>
@@ -66,7 +105,9 @@ function GitLabRepo() {
                     <Typography mb={5} variant="h5" fontWeight={"bold"}
                                 align="left">Commits</Typography>
                     <Box maxWidth={"40%"}>
-                        <FilterFormCommit/>
+                        <FilterFormCommit
+                            handleClick={getValues}
+                        />
                     </Box>
                     <GitLabCommitTable data={commitData}/>
                 </Container>
@@ -77,7 +118,7 @@ function GitLabRepo() {
                     <Typography mb={5} variant="h5" fontWeight={"bold"}
                                 align="left">Issues</Typography>
                     <Box maxWidth={"40%"}>
-                        <FilterFormIssue/>
+                        <FilterFormIssue handleClick={getValues}/>
                     </Box>
                     <GitLabIssueTable data={issueData}/>
                 </Container>
