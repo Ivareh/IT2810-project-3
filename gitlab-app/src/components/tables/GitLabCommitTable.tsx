@@ -9,11 +9,7 @@ import { CommitItem, DataItem } from "../interface/DataFormat"
 
 type CommitTableProps = {data: CommitItem[]}
 
-class GitLabCommitTable extends React.Component<CommitTableProps, {data: CommitItem[]}> {
-    constructor(props: CommitTableProps) {  
-        super(props);
-        this.state = {data: props.data};
-    }
+class GitLabCommitTable extends React.Component<CommitTableProps> {
 
     render() {
       return (
@@ -28,7 +24,7 @@ class GitLabCommitTable extends React.Component<CommitTableProps, {data: CommitI
               </TableRow>
           </TableHead>
             <TableBody>
-              {this.state.data.map((commit =>
+              {this.props.data.map((commit =>
                     <TableRow
                         key={commit.id}
                         sx={{'&:last-child td, &:last-child th': {border: 0}}}

@@ -12,18 +12,9 @@ export interface FilterFormProps {
     handleClick: (filterType: string, filterValue: string) => void;
 }
 
-
 export default function FilterFormCommit(props: FilterFormProps) {
-    const [filterType, setFilterType] = useState('')
+    const [filterType, setFilterType] = useState('author_name')
     const [filterValue, setFilterValue] = useState('')
-
-    useEffect(() => {
-        console.log("useEffect");
-    })
-
-    const sendFilterValues = () => {
-        console.log("button");
-    };
 
     return (
         <Box minWidth={"100%"} display="inline-flex" alignItems={"center"}>
@@ -31,7 +22,7 @@ export default function FilterFormCommit(props: FilterFormProps) {
                 <FormControl fullWidth>
                     <InputLabel>Filtertype</InputLabel>
                     <Select
-                        value={'test'}
+                        value={filterType}
                         label="Filtertype"
                         onChange={(e) => {
                             setFilterType(e.target.value as string)

@@ -9,15 +9,15 @@ export function filterById(data : CommitItem[], id : string) {
 }
 
 export function filterByTitle(data : CommitItem[], title : string) {
-  let filtered = data.filter(e => e.title == title)
+  let filtered = data.filter(e => e.title.toLowerCase().includes(title.toLocaleLowerCase()))
   if (filtered.length == 0) {
     throw new Error("No data found")
   }
   return filtered
 }
 
-export function filterByAuthor(data : CommitItem[], Author : string) {
-  let filtered = data.filter(e => e.author_name.includes(Author))
+export function filterByAuthor(data : CommitItem[], author_name : string) {
+  let filtered = data.filter(e => e.author_name.toLowerCase().includes(author_name.toLowerCase()))
   if (filtered.length == 0) {
     throw new Error("No data found")
   }
@@ -25,8 +25,8 @@ export function filterByAuthor(data : CommitItem[], Author : string) {
 }
 
 
-export function filterByCommitter(data : CommitItem[], Committer : string) {
-  let filtered = data.filter(e => e.committer_name.includes(Committer))
+export function filterByCommitter(data : CommitItem[], committer : string) {
+  let filtered = data.filter(e => e.committer_name.toLowerCase().includes(committer.toLowerCase()))
   if (filtered.length == 0) {
     throw new Error("No data found")
   }

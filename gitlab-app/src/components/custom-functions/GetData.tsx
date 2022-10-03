@@ -17,7 +17,6 @@ export function getInitialData(data: string): DataItem[] {
 export function getCommitData (): CommitItem[] {
 const initialCommitData = getInitialData("commits") as CommitItem[]
 const desiredKeys = ["id", "title", "author_name", "committer_name", "committed_date"] // Desired keys to get from object
-
     let desiredParametersCommitItemList : CommitItem[] = {} as CommitItem[];
 
     initialCommitData.forEach((commit : any) => {
