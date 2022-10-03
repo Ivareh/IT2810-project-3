@@ -8,7 +8,7 @@ import { getCommitData, getIssueData } from "./custom-functions/GetData";
 import GitLabIssueTable from "./tables/GitLabIssueTable";
 import { filterByCommit } from "./filter/FilterCommitData";
 import { filterByIssue } from "./filter/FilterIssueData";
-import { CommitKey, IssueKey } from "./interface/DataFormat";
+import { CommitKeys, IssueKeys } from "./interface/DataFormat";
 
 /* Displays Git Lab Data after it is loaded in a table with parameters*/
 function GitLabRepo() {
@@ -27,34 +27,34 @@ function GitLabRepo() {
             case "":
               setCommitData(getCommitData());
               break;
-            case CommitKey.TITLE:
+            case CommitKeys.TITLE:
               setCommitData(
-                filterByCommit(getCommitData(), CommitKey.TITLE, filterValue)
+                filterByCommit(getCommitData(), CommitKeys.TITLE, filterValue)
               );
               break;
-            case CommitKey.AUTHOR_NAME:
+            case CommitKeys.AUTHOR_NAME:
               setCommitData(
                 filterByCommit(
                   getCommitData(),
-                  CommitKey.AUTHOR_NAME,
+                  CommitKeys.AUTHOR_NAME,
                   filterValue
                 )
               );
               break;
-            case CommitKey.COMMITTER_NAME:
+            case CommitKeys.COMMITTER_NAME:
               setCommitData(
                 filterByCommit(
                   getCommitData(),
-                  CommitKey.COMMITTER_NAME,
+                  CommitKeys.COMMITTER_NAME,
                   filterValue
                 )
               );
               break;
-            case CommitKey.COMMITTED_DATE:
+            case CommitKeys.COMMITTED_DATE:
               setCommitData(
                 filterByCommit(
                   getCommitData(),
-                  CommitKey.COMMITTED_DATE,
+                  CommitKeys.COMMITTED_DATE,
                   filterValue
                 )
               );
@@ -65,30 +65,28 @@ function GitLabRepo() {
         }
       } else if (sessionStorage.getItem("filterOnKind") == "issues") {
         if (filterValue && filterType) {
-          console.log(filterType, filterValue);
-          console.log("ABOVE IS ISSUE FILTER");
           switch (filterType) {
             case "":
               setIssueData(getIssueData());
               break;
-            case IssueKey.TITLE:
+            case IssueKeys.TITLE:
               setIssueData(
-                filterByIssue(getIssueData(), IssueKey.TITLE, filterValue)
+                filterByIssue(getIssueData(), IssueKeys.TITLE, filterValue)
               );
               break;
-            case IssueKey.DESCRIPTION:
+            case IssueKeys.DESCRIPTION:
               setIssueData(
-                filterByIssue(getIssueData(), IssueKey.DESCRIPTION, filterValue)
+                filterByIssue(getIssueData(), IssueKeys.DESCRIPTION, filterValue)
               );
               break;
-            case IssueKey.STATE:
+            case IssueKeys.STATE:
               setIssueData(
-                filterByIssue(getIssueData(), IssueKey.STATE, filterValue)
+                filterByIssue(getIssueData(), IssueKeys.STATE, filterValue)
               );
               break;
-            case IssueKey.CREATED_AT:
+            case IssueKeys.CREATED_AT:
               setIssueData(
-                filterByIssue(getIssueData(), IssueKey.CREATED_AT, filterValue)
+                filterByIssue(getIssueData(), IssueKeys.CREATED_AT, filterValue)
               );
               break;
           }
@@ -99,8 +97,7 @@ function GitLabRepo() {
     } catch (e) {
       setCommitData([]);
       setIssueData([]);
-      console.log(e);
-      console.log("Coudln't find data");
+      console.log("Couldn't find data");
     }
   };
 
@@ -114,7 +111,6 @@ function GitLabRepo() {
       if (e instanceof TypeError) {
         alert("Load some data before trying to show it");
         console.log("No data loaded yet");
-        console.log(e);
       } else {
         throw e;
       }
