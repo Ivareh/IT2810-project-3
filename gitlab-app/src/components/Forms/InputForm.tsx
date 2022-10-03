@@ -95,7 +95,7 @@ export default function InputForm() {
                         variant="contained"
                         type={'submit'}
                         endIcon={<SendIcon/>}>
-                        dff
+                        Get
                     </Button>
                 </Box>
             </Box>

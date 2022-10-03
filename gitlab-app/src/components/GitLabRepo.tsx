@@ -45,8 +45,6 @@ function GitLabRepo() {
             }
         } catch(e) {
             setCommitData([])
-            setFilterOnType("")
-            setFilterOnValue("")
             console.log("Coudln't find data");
         }
         sessionStorage.setItem("filterOnType", filterType);
@@ -55,7 +53,6 @@ function GitLabRepo() {
 
     function handleShowCommits() {
         try {
-            setFilterOnKind("commits");
             sessionStorage.setItem("filterOnKind", "commits");
             setCommitData(getCommitData());
             setShowCommits(true);
@@ -73,7 +70,6 @@ function GitLabRepo() {
 
     function handleShowIssues() {
         try {
-            setFilterOnKind("issues");
             sessionStorage.setItem("filterOnKind", "issues");
             setIssueData(getIssueData());
             setShowCommits(false);
