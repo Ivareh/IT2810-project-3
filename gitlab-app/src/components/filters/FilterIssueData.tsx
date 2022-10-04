@@ -1,5 +1,6 @@
 import { IssueItem, IssueKey } from "../interface/DataFormat"
 
+// Filter issue data by id
 function filterByIssueId(data: IssueItem[], id: string) {
     let filtered = data.filter(e => e.id.toString() === id)
     if (filtered.length === 0) {
@@ -8,6 +9,7 @@ function filterByIssueId(data: IssueItem[], id: string) {
     return filtered
 }
 
+// Filter issue data by title
 function filterByIssueTitle(data: IssueItem[], title: string) {
     let filtered = data.filter(e => e.title.toLowerCase().includes(title.toLocaleLowerCase()))
     console.log("hey")
@@ -17,7 +19,8 @@ function filterByIssueTitle(data: IssueItem[], title: string) {
     return filtered
 }
 
-function filterByIssueAuthor(data: IssueItem[], description: string) {
+// Filter issue data by description
+function filterByIssueDescription(data: IssueItem[], description: string) {
     let filtered = data.filter(e => e.description.toLowerCase().includes(description.toLowerCase()))
     if (filtered.length === 0) {
         throw new Error("No data found")
@@ -25,7 +28,8 @@ function filterByIssueAuthor(data: IssueItem[], description: string) {
     return filtered
 }
 
-function filterByIssueCommitter(data: IssueItem[], state: string) {
+// Filter issue data by committer name
+function filterByIssueState(data: IssueItem[], state: string) {
     let filtered = data.filter(e => e.state.toLowerCase().includes(state.toLowerCase()))
     if (filtered.length === 0) {
         throw new Error("No data found")
@@ -33,7 +37,8 @@ function filterByIssueCommitter(data: IssueItem[], state: string) {
     return filtered
 }
 
-function filterByIssueDate(data: IssueItem[], Date: string) {
+// Filter issue data by created at date
+function filterByIssueCreatedAt(data: IssueItem[], Date: string) {
     let filtered = data.filter(e => e.created_at.split("T")[0].toLowerCase().includes(Date.toLowerCase()))
     if (filtered.length === 0) {
         throw new Error("No data found")
@@ -41,6 +46,7 @@ function filterByIssueDate(data: IssueItem[], Date: string) {
     return filtered
 }
 
+// Export function filter issue data by data, filtertype and filtervalue
 export function filterByIssue(data: IssueItem[], filterType: string, filterValue: string) {
     switch (filterType) {
         case IssueKey.ID:
@@ -51,11 +57,11 @@ export function filterByIssue(data: IssueItem[], filterType: string, filterValue
             console.log(hey)
             return hey
         case IssueKey.DESCRIPTION:
-            return filterByIssueAuthor(data, filterValue)
+            return filterByIssueDescription(data, filterValue)
         case IssueKey.STATE:
-            return filterByIssueCommitter(data, filterValue)
+            return filterByIssueState(data, filterValue)
         case IssueKey.CREATED_AT:
-            return filterByIssueDate(data, filterValue)
+            return filterByIssueCreatedAt(data, filterValue)
     }
 }
 

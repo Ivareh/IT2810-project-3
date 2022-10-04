@@ -2,6 +2,7 @@ import SwapModes from "./SwapModes";
 import { Grid, Typography } from "@mui/material";
 import './component-css/Footer.css';
 
+// Footer of the application
 export default function Footer() {
     return (
         <Grid id="footerContainer" container marginTop={10} flexGrow={1}

@@ -5,13 +5,15 @@ import { useState } from "react";
 import "./InputForm.css";
 import { Box } from "@mui/material";
 
+// Input form for the user to input to get the data from the GitLab API with specified repository and store data in local storage
 export default function InputForm() {
     const [domain, setDomain] = useState(
         "https://gitlab.stud.idi.ntnu.no/api/v4/projects/"
     );
     const [projectId, setProjectId] = useState("17598");
     const [token, setToken] = useState("glpat-2vnnyXYGFDt9YKYu5QYW");
-
+    
+    // Function to handle the submit of the form. Stores the fetched data in the local storage
     const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault()
         fetchCommits().then((data) => localStorage.setItem('commits',
@@ -22,7 +24,7 @@ export default function InputForm() {
             JSON.stringify(data)))
     }
 
-
+    // Fetches the issues from the GitLab API wit specified url from user input
     const fetchIssues = async (): Promise<object> => {
         try {
             const url = `${domain}/${projectId}/issues?per_page=100&private_token=${token}`
@@ -40,6 +42,7 @@ export default function InputForm() {
         }
     }
 
+    // Fetches the commits from the GitLab API wit specified url from user input
     const fetchCommits = async (): Promise<object> => {
         try {
             const url = `${domain}/${projectId}/repository/commits?per_page=100&private_token=${token}`
