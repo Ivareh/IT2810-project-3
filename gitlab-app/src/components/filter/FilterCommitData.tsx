@@ -49,7 +49,6 @@ export function filterByCommit(data: CommitItem[], filterType: string, filterVal
     case CommitKey.TITLE:
       return filterByCommitTitle(data, filterValue)
     case CommitKey.AUTHOR_NAME:
-      console.log(filterType, filterValue)
       return filterByCommitAuthor(data, filterValue)
     case CommitKey.COMMITTER_NAME:
       return filterByCommitCommitter(data, filterValue)
