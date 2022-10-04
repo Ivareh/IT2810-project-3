@@ -1,0 +1,27 @@
+#inputform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+    width: auto;
+    height: 100%;
+
+
+}
+
+#getButton {
+    margin-left: 30px;
+    margin-top: 35px;
+}
+
+/* MEDIA QUERIES*/
+
+/* phone */
+@media screen and (max-device-width: 350px) {
+    #inputForm {
+        justify-content: center;
+        width: 50px;
+    }
+}
+

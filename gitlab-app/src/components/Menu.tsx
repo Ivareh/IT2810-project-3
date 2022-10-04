@@ -1,13 +1,11 @@
-
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Box, ThemeProvider, Typography } from '@mui/material';
+import {ThemeProvider, Typography} from '@mui/material';
 import GitLabTheme from '../themes/GitLabTheme';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { grey } from '@mui/material/colors';
+import {useLocation, useNavigate} from 'react-router-dom';
 
 
 /* This component is from https://mui.com/material-ui/react-menu/ with some customization */
@@ -40,49 +38,51 @@ export default function PositionedMenu() {
   };
 
   return (
-    <div>
-      <ThemeProvider theme={GitLabTheme}>
-      <Button 
-        id="demo-positioned-button"
-        aria-controls={open ? 'demo-positioned-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        color={buttonFlag ? "secondary" : "primary"}
-        sx = {{backgroundColor: buttonFlag ? "primary" : "white", }}
-        onClick={handleClick}
-      >
-        <MenuIcon fontSize="small" ></MenuIcon>
-        <Typography variant="body2" fontSize="small" sx={{textTransform: "none", marginLeft:0.5}}>
-            Menu
-        </Typography>
-    
-      </Button>
+      <div>
+        <ThemeProvider theme={GitLabTheme}>
+          <Button
+              id="demo-positioned-button"
+              aria-controls={open ? 'demo-positioned-menu' : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? 'true' : undefined}
+              color={buttonFlag ? "secondary" : "primary"}
+              sx={{backgroundColor: buttonFlag ? "primary" : "white",}}
+              onClick={handleClick}
+          >
+            <MenuIcon fontSize="small"></MenuIcon>
+            <Typography variant="body2" fontSize="small"
+                        sx={{textTransform: "none", marginLeft: 0.5}}>
+              Menu
+            </Typography>
 
-        <Menu
-          id="demo-positioned-menu"
-          aria-labelledby="demo-positioned-button"
-          anchorEl={anchorEl}
-          open={open}
-          onClose={handleClose}
-          anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'left',
-          }}
-          transformOrigin={{
-            vertical: -16,
-            horizontal: 0,
-          }}
-        >
-          <MenuItem onClick={(e) => handleCloseWithPath("/")}>
-            {isDataLoader ? (
-              <Typography fontWeight={500}>GitLab Repo Dataloader</Typography>
-            ) : (
-              <Typography>GitLab Repo Dataloader</Typography>
-            )}
-          </MenuItem>
-        </Menu>
+          </Button>
 
-      </ThemeProvider>
-    </div>
+          <Menu
+              id="demo-positioned-menu"
+              aria-labelledby="demo-positioned-button"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              transformOrigin={{
+                vertical: -16,
+                horizontal: 0,
+              }}
+          >
+            <MenuItem onClick={(e) => handleCloseWithPath("/")}>
+              {isDataLoader ? (
+                  <Typography fontWeight={500}>GitLab Repo
+                    Dataloader</Typography>
+              ) : (
+                  <Typography>GitLab Repo Dataloader</Typography>
+              )}
+            </MenuItem>
+          </Menu>
+
+        </ThemeProvider>
+      </div>
   );
 }

@@ -1,18 +1,21 @@
-import { Box, Container } from '@mui/material'
+import {Box, Container} from '@mui/material'
 import React from 'react'
-import GitLabRepo from './GitLabRepo'
 import GitLabRepoDataLoader from './GitLabRepoDataLoader'
 
 function GitLab() {
   return (
-    <Container maxWidth="lg">
-        <Box mt={10}>
-            <GitLabRepoDataLoader/>
-        </Box>
-        <Box>
-            <GitLabRepo/>
-        </Box>
-    </Container>
+      <Container id={'dataContainer'}
+                 sx={{
+                     display: 'flex',
+                     justifyContent: 'center',
+                     width: '100%'
+                 }}
+                 maxWidth="lg">
+          <GitLabRepoDataLoader/>
+          <Box>
+              {/* <GitLabRepo/>*/}
+          </Box>
+      </Container>
   )
 }
 

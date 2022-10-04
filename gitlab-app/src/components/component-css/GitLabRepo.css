@@ -1,0 +1,14 @@
+/* MEDIA QUERIES*/
+
+/* phone */
+
+@media screen and (max-device-width: 480px) {
+    #button {
+        justify-content: center;
+    } #issue h5{
+        text-align: center;
+    } #commits h5 {
+        text-align: center;
+    }
+}
+  

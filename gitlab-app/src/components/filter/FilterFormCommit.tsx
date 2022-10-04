@@ -1,12 +1,12 @@
-import {useState, useEffect, MouseEventHandler} from 'react';
-import Button from '@mui/material/Button';
+import {useState} from 'react';
 import {Box} from "@mui/system"
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
-import {Container} from '@mui/material';
+import Button from "@mui/material/Button";
+import '../component-css/FilterForms.css';
 
 export interface FilterFormProps {
     handleClick: (filterType: string, filterValue: string) => void;
@@ -17,8 +17,12 @@ export default function FilterFormCommit(props: FilterFormProps) {
     const [filterValue, setFilterValue] = useState('')
 
     return (
-        <Box minWidth={"100%"} display="inline-flex" alignItems={"center"}>
-            <Box minWidth={"30%"}>
+        <Box id="boxCommits"
+            sx={{
+                display: 'inline-flex',
+            }}
+            minWidth={"100%"} display="inline-flex" alignItems={"center"}>
+            <Box minWidth={"40%"}>
                 <FormControl fullWidth>
                     <InputLabel>Filtertype</InputLabel>
                     <Select
@@ -30,12 +34,13 @@ export default function FilterFormCommit(props: FilterFormProps) {
                     >
                         <MenuItem value={"title"}>Title</MenuItem>
                         <MenuItem value={"author_name"}>Author</MenuItem>
-                        <MenuItem value={"commiter_name"}>Committer</MenuItem>
+                        <MenuItem value={"committer_name"}>Committer</MenuItem>
                         <MenuItem value={"committed_date"}>Date</MenuItem>
                     </Select>
+
                 </FormControl>
             </Box>
-            <Box minWidth={"70%"}>
+            <Box minWidth={"60%"}>
                 <TextField
                     fullWidth
                     label="Value"
@@ -45,15 +50,16 @@ export default function FilterFormCommit(props: FilterFormProps) {
                     }}
                 />
             </Box>
-
-            <Box justifyContent="flex-end" ml={1}>
+            <Box id="filterCommitBtn" justifyContent="flex-end" ml={1}>
                 <Button variant="contained"
+                        sx={{}}
                         onClick={() => props.handleClick(filterType, filterValue)}
                 >
                     Filter
                 </Button>
             </Box>
-
         </Box>
+
+
     );
 }
