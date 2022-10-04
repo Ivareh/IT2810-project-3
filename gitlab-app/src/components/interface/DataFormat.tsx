@@ -1,7 +1,9 @@
+// General data item with id
 export interface DataItem {
     id: number;
 }
 
+// Commit item with id, title, author name, committer name, and committed date
 export interface CommitItem extends DataItem {
     title: string;
     author_name: string;
@@ -9,7 +11,7 @@ export interface CommitItem extends DataItem {
     committed_date: string;
 }
 
-
+// Issue item with id, title, author name, and created date
 export interface IssueItem extends DataItem {
     title: string;
     description: string;
@@ -17,7 +19,7 @@ export interface IssueItem extends DataItem {
     created_at: string;
 }
 
-
+// Strings for commit keys
 export class CommitKey {
     public static readonly ID = "id";
     public static readonly TITLE = "title";
@@ -26,6 +28,7 @@ export class CommitKey {
     public static readonly COMMITTED_DATE = "committed_date";
 }
 
+// Strings for issue keys
 export class IssueKey {
     public static readonly ID = "id";
     public static readonly TITLE = "title";

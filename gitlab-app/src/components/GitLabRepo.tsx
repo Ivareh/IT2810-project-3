@@ -18,6 +18,11 @@ function GitLabRepo() {
     const [commitData, setCommitData] = useState([]);
     const [issueData, setIssueData] = useState([]);
 
+    /* Gets filtertype and value and filters the data if there are any filters. If there are no filters, it displays all data.
+    Stores the filtered data in the state variable commitData and issueData 
+    * @param filterType: string
+    * @param filterValue: string
+    * */
     const getValues = (filterType: string, filterValue: string) => {
         sessionStorage.setItem("filterOnType", filterType);
         sessionStorage.setItem("filterOnValue", filterValue);
@@ -71,10 +76,11 @@ function GitLabRepo() {
             setCommitData([])
             setIssueData([])
             console.log(e)
-            console.log("Coudln't find data");
+            console.log("Couldn't find data");
         }
     }
 
+    // Sets state to either show or hide the commit table
     function handleShowCommits() {
         try {
             sessionStorage.setItem("filterOnKind", "commits");
@@ -92,6 +98,7 @@ function GitLabRepo() {
         }
     }
 
+    // Sets state to either show or hide the issue table
     function handleShowIssues() {
         try {
             sessionStorage.setItem("filterOnKind", "issues");

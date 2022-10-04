@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import './component-css/About.css';
 
-
+// Displays information about the application
 export default function About() {
     return (
         <Grid className="about"
