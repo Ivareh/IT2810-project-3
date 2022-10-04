@@ -8,13 +8,9 @@ import GitLab from "./components/GitLab";
 function App() {
   return (
     <ColorModeProvider>
-      <Router>
         <CssBaseline />
         <Header />
-        <Routes>
-          <Route path="/" element={<GitLab />} />
-        </Routes>
-      </Router>
+          <GitLab />
       <SwapModes />
     </ColorModeProvider>
   );
