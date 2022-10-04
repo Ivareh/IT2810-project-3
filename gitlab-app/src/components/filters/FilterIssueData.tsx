@@ -1,4 +1,4 @@
-import {IssueItem, IssueKey} from "../interface/DataFormat"
+import { IssueItem, IssueKey } from "../interface/DataFormat"
 
 function filterByIssueId(data: IssueItem[], id: string) {
     let filtered = data.filter(e => e.id.toString() == id)

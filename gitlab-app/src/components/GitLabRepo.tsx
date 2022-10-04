@@ -1,14 +1,14 @@
-import {Button, Container, Grid, Typography} from "@mui/material"
-import {Box} from "@mui/system"
-import FilterFormCommit from "./filter/FilterFormCommit"
-import FilterFormIssue from "./filter/FilterFormIssue"
-import {useState} from 'react'
+import { Button, Container, Grid, Typography } from "@mui/material"
+import { Box } from "@mui/system"
+import FilterFormCommit from "./filters/FilterFormCommit"
+import FilterFormIssue from "./filters/FilterFormIssue"
+import { useState } from 'react'
 import GitLabCommitTable from "./tables/GitLabCommitTable"
-import {getCommitData, getIssueData} from "./custom-functions/GetData"
+import { getCommitData, getIssueData } from "./custom-functions/GetData"
 import GitLabIssueTable from "./tables/GitLabIssueTable"
-import {filterByCommit} from "./filter/FilterCommitData"
-import {filterByIssue} from "./filter/FilterIssueData"
-import {CommitKey, IssueKey} from "./interface/DataFormat"
+import { filterByCommit } from "./filters/FilterCommitData"
+import { filterByIssue } from "./filters/FilterIssueData"
+import { CommitKey, IssueKey } from "./interface/DataFormat"
 import './component-css/GitLabRepo.css'
 
 /* Displays Git Lab Data after it is loaded in a table with parameters*/
@@ -109,41 +109,41 @@ function GitLabRepo() {
 
     return (
         <>
-            <Grid id="button"container direction={"row"} spacing={15} wrap={"nowrap"}
-                  justifyContent={"center"} mb={10}>
+            <Grid id="button" container direction={"row"} spacing={15} wrap={"nowrap"}
+                justifyContent={"center"} mb={10}>
                 <Grid item>
                     <Button variant="contained"
-                            sx={{marginTop: '25px'}}
-                            onClick={() => handleShowCommits()}>Commits</Button>
+                        sx={{ marginTop: '25px' }}
+                        onClick={() => handleShowCommits()}>Commits</Button>
                 </Grid>
                 <Grid item>
                     <Button variant="contained"
-                            sx={{marginTop: '25px'}}
-                            onClick={() => handleShowIssues()}>Issues</Button>
+                        sx={{ marginTop: '25px' }}
+                        onClick={() => handleShowIssues()}>Issues</Button>
                 </Grid>
             </Grid>
 
             {showCommits && <Box mb={28}>
                 <Container id="commits" maxWidth="lg">
                     <Typography mb={5} variant="h5" fontWeight={"bold"}
-                                align="left">Commits</Typography>
+                        align="left">Commits</Typography>
                     <Box maxWidth={"70%"}>
                         <FilterFormCommit
                             handleClick={getValues}
                         />
                     </Box>
-                    <GitLabCommitTable data={commitData}/>
+                    <GitLabCommitTable data={commitData} />
                 </Container>
             </Box>}
 
             {showIssues && <Box mb={28}>
-                <Container id="issue"maxWidth="lg">
+                <Container id="issue" maxWidth="lg">
                     <Typography mb={5} variant="h5" fontWeight={"bold"}
-                                align="left">Issues</Typography>
+                        align="left">Issues</Typography>
                     <Box maxWidth={"70%"}>
-                        <FilterFormIssue handleClick={getValues}/>
+                        <FilterFormIssue handleClick={getValues} />
                     </Box>
-                    <GitLabIssueTable data={issueData}/>
+                    <GitLabIssueTable data={issueData} />
                 </Container>
             </Box>}
         </>

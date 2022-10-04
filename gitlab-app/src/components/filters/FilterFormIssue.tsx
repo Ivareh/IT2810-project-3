@@ -1,27 +1,23 @@
-import {useState} from 'react';
-import {Box} from "@mui/system"
+import { useState } from 'react';
+import Button from '@mui/material/Button';
+import { Box } from "@mui/system"
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
-import Button from "@mui/material/Button";
 import '../component-css/FilterForms.css';
 
 export interface FilterFormProps {
     handleClick: (filterType: string, filterValue: string) => void;
 }
 
-export default function FilterFormCommit(props: FilterFormProps) {
-    const [filterType, setFilterType] = useState('author_name')
+export default function FilterFormIssue(props: FilterFormProps) {
+    const [filterType, setFilterType] = useState('title')
     const [filterValue, setFilterValue] = useState('')
 
     return (
-        <Box id="boxCommits"
-            sx={{
-                display: 'inline-flex',
-            }}
-            minWidth={"100%"} display="inline-flex" alignItems={"center"}>
+        <Box id="boxFilter" minWidth={"100%"} display="inline-flex" alignItems={"center"}>
             <Box minWidth={"40%"}>
                 <FormControl fullWidth>
                     <InputLabel>Filtertype</InputLabel>
@@ -33,11 +29,10 @@ export default function FilterFormCommit(props: FilterFormProps) {
                         }}
                     >
                         <MenuItem value={"title"}>Title</MenuItem>
-                        <MenuItem value={"author_name"}>Author</MenuItem>
-                        <MenuItem value={"committer_name"}>Committer</MenuItem>
-                        <MenuItem value={"committed_date"}>Date</MenuItem>
+                        <MenuItem value={"description"}>Description</MenuItem>
+                        <MenuItem value={"state"}>State</MenuItem>
+                        <MenuItem value={"created_at"}>Created at</MenuItem>
                     </Select>
-
                 </FormControl>
             </Box>
             <Box minWidth={"60%"}>
@@ -50,16 +45,15 @@ export default function FilterFormCommit(props: FilterFormProps) {
                     }}
                 />
             </Box>
-            <Box id="filterCommitBtn" justifyContent="flex-end" ml={1}>
+
+            <Box id="filterIssueBtn" justifyContent="flex-end" ml={1}>
                 <Button variant="contained"
-                        sx={{}}
-                        onClick={() => props.handleClick(filterType, filterValue)}
+                    onClick={() => props.handleClick(filterType, filterValue)}
                 >
                     Filter
                 </Button>
             </Box>
+
         </Box>
-
-
     );
 }

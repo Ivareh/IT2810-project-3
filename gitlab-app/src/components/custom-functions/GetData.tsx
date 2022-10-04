@@ -1,4 +1,4 @@
-import {CommitItem, DataItem, IssueItem} from "../interface/DataFormat";
+import { CommitItem, DataItem, IssueItem } from "../interface/DataFormat";
 
 
 // Gets initial data from web storage to display in the table

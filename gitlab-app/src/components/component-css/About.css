@@ -4,7 +4,7 @@
     margin-right: 20px;
 }
 
-.about > p {
+.about>p {
     align-self: center;
     justify-content: center;
 }
@@ -13,7 +13,7 @@
 /* MEDIA QUERIES */
 @media only screen and (max-width: 1024px) {
 
-    .about > p {
+    .about>p {
         width: 85ch;
         font-size: 17px;
         text-align: center;
@@ -27,7 +27,9 @@
     .about p {
         font-size: 10px;
         width: 85ch;
-    } .about{
+    }
+
+    .about {
         margin-bottom: 50px;
         height: fit-content;
         width: 100ch;
@@ -70,5 +72,3 @@
         font-size: 25px;
     }
 }
-  
-  

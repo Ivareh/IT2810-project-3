@@ -1,21 +1,25 @@
-
-
 @media screen and (max-device-width: 480px) {
     #boxFilter {
         display: flex;
         flex-direction: column;
         margin-left: 50px;
         display: block;
-    } #filterIssueBtn {
+    }
+
+    #filterIssueBtn {
         align-items: center;
         margin-left: 85px;
         margin-top: 10px;
-    }#boxCommits {
+    }
+
+    #boxCommits {
         display: flex;
         flex-direction: column;
         margin-left: 50px;
         display: block;
-    }#filterCommitBtn {
+    }
+
+    #filterCommitBtn {
         align-items: center;
         margin-left: 75px;
         margin-top: 10px;

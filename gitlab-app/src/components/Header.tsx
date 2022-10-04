@@ -1,6 +1,6 @@
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import GitLabIcon from "./custom-icons/GitLabIcon";
-import {Grid, IconButton} from "@mui/material";
+import { Grid, IconButton } from "@mui/material";
 import "./component-css/Header.css";
 import React from "react";
 
@@ -10,13 +10,13 @@ function Header() {
     return (
         <Grid id="header">
             <Grid id="navigationMenu"
-                  container spacing={0}>
+                container spacing={0}>
                 <Grid id="logo" container spacing={0}>
                     {" "}
                     <IconButton id="icon">
                         <a href="https://gitlab.stud.idi.ntnu.no/it2810-h22/Team-62/it2810-h22-team-62"
-                           target="_blank"><GitLabIcon htmlColor="#e24329"
-                                                       fontSize="large"/></a>
+                            target="_blank"><GitLabIcon htmlColor="#e24329"
+                                fontSize="large" /></a>
 
                     </IconButton>
 

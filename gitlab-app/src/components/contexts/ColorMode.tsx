@@ -23,7 +23,7 @@ export const ColorModeContext = React.createContext(
  */
 
 //@ts-ignore
-export const ColorModeProvider = ({children}) => {
+export const ColorModeProvider = ({ children }) => {
     const storedMode = localStorage.getItem('colormode');
     const [mode, setMode] = React.useState(
         storedMode === 'null' ? '' : storedMode);
@@ -56,7 +56,7 @@ export const ColorModeProvider = ({children}) => {
     return (
         <ColorModeContext.Provider value={colorMode}>
             <ThemeProvider theme={theme}>
-                <CssBaseline/>
+                <CssBaseline />
                 {children}
             </ThemeProvider>
         </ColorModeContext.Provider>

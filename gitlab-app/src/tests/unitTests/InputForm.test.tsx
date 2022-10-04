@@ -1,5 +1,5 @@
 /** @jest-environment jsdom */
-import {cleanup, fireEvent, render, screen} from "@testing-library/react";
+import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import InputForm from "../../components/Forms/InputForm";
 import '@testing-library/jest-dom'
 
@@ -12,7 +12,7 @@ beforeEach(() => {
     localStorage.removeItem('commits')
     localStorage.removeItem('issues')
     render(
-        <InputForm/>);
+        <InputForm />);
 });
 
 /**
@@ -45,6 +45,6 @@ test("Check if the original state is being displayed", () => {
 
 test("If we can change the values of the form", () => {
     const searchBar = screen.getByTestId('domain') as HTMLInputElement
-    fireEvent.change(searchBar, {target: {value: "123dab123"}});
+    fireEvent.change(searchBar, { target: { value: "123dab123" } });
     expect(searchBar.value).toBe("123dab123")
 })

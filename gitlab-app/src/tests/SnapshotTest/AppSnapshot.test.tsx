@@ -11,7 +11,7 @@ const ReactTestRenderer = require('react-test-renderer');
 describe("The snapshot", () => {
     it('matches the reference', () => {
         const tree = ReactTestRenderer
-            .create(<App/>)
+            .create(<App />)
             .toJSON();
         expect(tree).toMatchSnapshot();
     });

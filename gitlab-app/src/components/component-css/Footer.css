@@ -2,17 +2,16 @@
 
 /* phone */
 
-@media screen and (max-device-width: 640px){
-    #footerContainer {
-        justify-content: center;
-        gap: 7px;
-        padding-left: 10px;
-      }
+@media screen and (max-device-width: 640px) {
+  #footerContainer {
+    justify-content: center;
+    gap: 7px;
+    padding-left: 10px;
   }
+}
 
-  @media screen and (max-device-width: 480px){
-    #footerContainer {
-        padding-left: 25px;
-      }
+@media screen and (max-device-width: 480px) {
+  #footerContainer {
+    padding-left: 25px;
   }
-
+}
