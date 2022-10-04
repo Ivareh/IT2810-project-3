@@ -1,7 +1,7 @@
 import { Button, Container, Grid, Typography } from "@mui/material"
 import { Box } from "@mui/system"
-import FilterFormCommit from "./filters/FilterFormCommit"
-import FilterFormIssue from "./filters/FilterFormIssue"
+import FilterFormCommit from "./forms/FilterFormCommit"
+import FilterFormIssue from "./forms/FilterFormIssue"
 import { useState } from 'react'
 import GitLabCommitTable from "./tables/GitLabCommitTable"
 import { getCommitData, getIssueData } from "./custom-functions/GetData"
