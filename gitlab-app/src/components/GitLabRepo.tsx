@@ -1,15 +1,15 @@
-import { Button, Container, Grid, Typography } from "@mui/material"
-import { Box } from "@mui/system"
-import FilterFormCommit from "./forms/FilterFormCommit"
-import FilterFormIssue from "./forms/FilterFormIssue"
-import { useState } from 'react'
+import {Button, Container, Grid, Typography} from "@mui/material"
+import {Box} from "@mui/system"
+import {useState} from 'react'
 import GitLabCommitTable from "./tables/GitLabCommitTable"
-import { getCommitData, getIssueData } from "./custom-functions/GetData"
+import {getCommitData, getIssueData} from "./custom-functions/GetData"
 import GitLabIssueTable from "./tables/GitLabIssueTable"
-import { filterByCommit } from "./filters/FilterCommitData"
-import { filterByIssue } from "./filters/FilterIssueData"
-import { CommitKey, IssueKey } from "./interface/DataFormat"
+import {filterByCommit} from "./filters/FilterCommitData"
+import {filterByIssue} from "./filters/FilterIssueData"
+import {CommitKey, IssueKey} from "./interface/DataFormat"
 import './component-css/GitLabRepo.css'
+import FilterFormCommit from "./Forms/FilterFormCommit";
+import FilterFormIssue from "./Forms/FilterFormIssue";
 
 /* Displays Git Lab Data after it is loaded in a table with parameters*/
 function GitLabRepo() {

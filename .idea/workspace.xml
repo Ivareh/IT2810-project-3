@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="826a2bb9-2246-4f2b-b8c6-c322c6eca183" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gitlab-app/src/components/Forms/InputForm.tsx" afterDir="false" />
+    <list default="true" id="826a2bb9-2246-4f2b-b8c6-c322c6eca183" name="Changes" comment="&#10;Updated file paths">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/Forms/InputForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/Forms/InputForm.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="jestTesting" />
+        <entry key="$PROJECT_DIR$" value="responsiveSite" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -159,7 +160,19 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1664841972458</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="responsive site">
+      <created>1664898031705</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1664898031705</updated>
+    </task>
+    <task id="LOCAL−00005" summary="&#10;Updated file paths">
+      <created>1664898492097</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1664898492097</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +203,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed css files, merged main locally" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed css files, merged main locally" />
+    <MESSAGE value="responsive site" />
+    <MESSAGE value="&#10;Updated file paths" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;Updated file paths" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

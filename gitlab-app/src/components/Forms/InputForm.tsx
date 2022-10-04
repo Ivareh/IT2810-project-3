@@ -1,9 +1,9 @@
 import TextField from "@mui/material/TextField";
 import SendIcon from "@mui/icons-material/Send";
 import Button from "@mui/material/Button";
-import { useState } from "react";
-import "./InputForm.css";
-import { Box } from "@mui/material";
+import {useState} from "react";
+import "../component-css/InputForm.css";
+import {Box} from "@mui/material";
 
 // Input form for the user to input to get the data from the GitLab API with specified repository and store data in local storage
 export default function InputForm() {
@@ -12,7 +12,7 @@ export default function InputForm() {
     );
     const [projectId, setProjectId] = useState("17598");
     const [token, setToken] = useState("glpat-2vnnyXYGFDt9YKYu5QYW");
-    
+
     // Function to handle the submit of the form. Stores the fetched data in the local storage
     const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault()

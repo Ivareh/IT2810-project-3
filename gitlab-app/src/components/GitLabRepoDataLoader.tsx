@@ -1,7 +1,7 @@
-import { Grid, TypographyProps, } from "@mui/material";
+import {Grid, TypographyProps,} from "@mui/material";
 import GitLabRepo from "./GitLabRepo";
-import InputForm from "./forms/InputForm";
 import "./component-css/GitLabRepoDataLoader.css";
+import InputForm from "./Forms/InputForm";
 
 /* Loads GitLab data from a repo*/
 function GitLabRepoDataLoader(props: TypographyProps) {
