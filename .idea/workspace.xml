@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="826a2bb9-2246-4f2b-b8c6-c322c6eca183" name="Changes" comment="Fixed css files, merged main locally">
+      <change beforePath="$PROJECT_DIR$/gitlab-app/jest.config.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="jestTesting" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectId" id="2FdEQ3EwlMazaDMQv5iReABvZhz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Users\Vegard Nikolai\webutvikling\it2810-h22-team-62\gitlab-app\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Vegard Nikolai\webutvikling\it2810-h22-team-62\gitlab-app\src\components\css" />
+      <recent name="C:\Users\Vegard Nikolai\webutvikling\it2810-h22-team-62\gitlab-app\src\components\forms" />
+      <recent name="C:\Users\Vegard Nikolai\webutvikling\it2810-h22-team-62\gitlab-app\src\components" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Jest.Check if inputs are being rendered">
+    <configuration name="Check if inputs are being rendered" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/gitlab-app/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/gitlab-app" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/gitlab-app/src/tests/unitTests/InputForm.test.tsx" />
+      <test-names>
+        <test-name value="Check if inputs are being rendered" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="InputForm.test.tsx (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/gitlab-app/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/gitlab-app" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/gitlab-app/src/tests/SnapshotTest/InputForm.test.tsx" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Snapshot testing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/gitlab-app/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/gitlab-app" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/gitlab-app/src/tests/SnapshotTest/InputForm.test.tsx" />
+      <test-names>
+        <test-name value="Snapshot testing" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Snapshot testing.renders correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/gitlab-app/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/gitlab-app" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/gitlab-app/src/tests/SnapshotTest/InputForm.test.tsx" />
+      <test-names>
+        <test-name value="Snapshot testing" />
+        <test-name value="renders correctly" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="renders correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/gitlab-app/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/gitlab-app" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/gitlab-app/src/tests/SnapshotTest/InputForm.test.tsx" />
+      <test-names>
+        <test-name value="renders correctly" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.Snapshot testing.renders correctly" />
+        <item itemvalue="Jest.Snapshot testing" />
+        <item itemvalue="Jest.renders correctly" />
+        <item itemvalue="Jest.InputForm.test.tsx (1)" />
+        <item itemvalue="Jest.Check if inputs are being rendered" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="826a2bb9-2246-4f2b-b8c6-c322c6eca183" name="Changes" comment="" />
+      <created>1664813542300</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1664813542300</updated>
+      <workItem from="1664813543474" duration="18856000" />
+      <workItem from="1664840219016" duration="215000" />
+      <workItem from="1664840467144" duration="72000" />
+      <workItem from="1664840551759" duration="191000" />
+      <workItem from="1664840755160" duration="10000" />
+      <workItem from="1664840767460" duration="1376000" />
+    </task>
+    <task id="LOCAL−00001" summary="Fixed css files, merged main locally">
+      <created>1664839913152</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1664839913152</updated>
+    </task>
+    <task id="LOCAL−00002" summary="Fixed css files, merged main locally">
+      <created>1664840143564</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1664840143564</updated>
+    </task>
+    <task id="LOCAL−00003" summary="Fixed css files, merged main locally">
+      <created>1664841972458</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1664841972458</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="21-style-website-and-make-it-responsive-to-different-screen-sizes" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixed css files, merged main locally" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed css files, merged main locally" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+</project>
