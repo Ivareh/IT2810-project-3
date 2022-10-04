@@ -15,3 +15,13 @@
     margin-top: 35px;
 }
 
+/* MEDIA QUERIES*/
+
+/* phone */
+@media screen and (max-device-width: 350px) {
+    #inputForm {
+        justify-content: center;
+        width: 50px;
+    }
+}
+

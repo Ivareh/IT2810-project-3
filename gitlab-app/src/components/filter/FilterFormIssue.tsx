@@ -6,6 +6,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
+import '../component-css/FilterForms.css';
 
 export interface FilterFormProps {
     handleClick: (filterType: string, filterValue: string) => void;
@@ -16,7 +17,7 @@ export default function FilterFormIssue(props: FilterFormProps) {
     const [filterValue, setFilterValue] = useState('')
 
     return (
-        <Box minWidth={"100%"} display="inline-flex" alignItems={"center"}>
+        <Box id="boxFilter" minWidth={"100%"} display="inline-flex" alignItems={"center"}>
             <Box minWidth={"40%"}>
                 <FormControl fullWidth>
                     <InputLabel>Filtertype</InputLabel>
@@ -45,7 +46,7 @@ export default function FilterFormIssue(props: FilterFormProps) {
                 />
             </Box>
 
-            <Box justifyContent="flex-end" ml={1}>
+            <Box id="filterIssueBtn"justifyContent="flex-end" ml={1}>
                 <Button variant="contained"
                         onClick={() => props.handleClick(filterType, filterValue)}
                 >

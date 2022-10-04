@@ -4,7 +4,6 @@
     background-position: center center;
     height: 100vh;
     overflow: hidden;
-
 }
 
 #logo {
@@ -51,6 +50,7 @@
     font-weight: bold;
     font-size: 70px;
     letter-spacing: 1.5px;
+    
 }
 
 #mainText p {

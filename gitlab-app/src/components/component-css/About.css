@@ -14,7 +14,7 @@
 @media only screen and (max-width: 1024px) {
 
     .about > p {
-        width: 75ch;
+        width: 85ch;
         font-size: 17px;
         text-align: center;
     }
@@ -26,6 +26,11 @@
 
     .about p {
         font-size: 10px;
+        width: 85ch;
+    } .about{
+        margin-bottom: 50px;
+        height: fit-content;
+        width: 100ch;
     }
 }
 
@@ -37,10 +42,9 @@
     }
 
     .about p {
-        width: 70ch;
+        width: 87ch;
         font-size: 17px;
         text-align: center;
-        margin-bottom: auto;
     }
 
     .about h2 {
@@ -54,7 +58,6 @@
 @media screen and (max-device-width: 480px) {
     .about {
         justify-content: center;
-        margin-left: 100px;
     }
 
     .about p {

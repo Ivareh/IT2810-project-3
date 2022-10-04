@@ -6,6 +6,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
 import Button from "@mui/material/Button";
+import '../component-css/FilterForms.css';
 
 export interface FilterFormProps {
     handleClick: (filterType: string, filterValue: string) => void;
@@ -16,7 +17,7 @@ export default function FilterFormCommit(props: FilterFormProps) {
     const [filterValue, setFilterValue] = useState('')
 
     return (
-        <Box
+        <Box id="boxCommits"
             sx={{
                 display: 'inline-flex',
             }}
@@ -49,7 +50,7 @@ export default function FilterFormCommit(props: FilterFormProps) {
                     }}
                 />
             </Box>
-            <Box justifyContent="flex-end" ml={1}>
+            <Box id="filterCommitBtn" justifyContent="flex-end" ml={1}>
                 <Button variant="contained"
                         sx={{}}
                         onClick={() => props.handleClick(filterType, filterValue)}

@@ -9,6 +9,7 @@ import GitLabIssueTable from "./tables/GitLabIssueTable"
 import {filterByCommit} from "./filter/FilterCommitData"
 import {filterByIssue} from "./filter/FilterIssueData"
 import {CommitKey, IssueKey} from "./interface/DataFormat"
+import './component-css/GitLabRepo.css'
 
 /* Displays Git Lab Data after it is loaded in a table with parameters*/
 function GitLabRepo() {
@@ -108,7 +109,7 @@ function GitLabRepo() {
 
     return (
         <>
-            <Grid container direction={"row"} spacing={20} wrap={"nowrap"}
+            <Grid id="button"container direction={"row"} spacing={15} wrap={"nowrap"}
                   justifyContent={"center"} mb={10}>
                 <Grid item>
                     <Button variant="contained"
@@ -123,7 +124,7 @@ function GitLabRepo() {
             </Grid>
 
             {showCommits && <Box mb={28}>
-                <Container maxWidth="lg">
+                <Container id="commits" maxWidth="lg">
                     <Typography mb={5} variant="h5" fontWeight={"bold"}
                                 align="left">Commits</Typography>
                     <Box maxWidth={"70%"}>
@@ -136,7 +137,7 @@ function GitLabRepo() {
             </Box>}
 
             {showIssues && <Box mb={28}>
-                <Container maxWidth="lg">
+                <Container id="issue"maxWidth="lg">
                     <Typography mb={5} variant="h5" fontWeight={"bold"}
                                 align="left">Issues</Typography>
                     <Box maxWidth={"70%"}>
