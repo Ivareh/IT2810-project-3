@@ -17,11 +17,13 @@ class GitLabCommitTable extends React.Component<CommitTableProps> {
 
 
     render() {
+
+
         return (
             <TableContainer className="commitTable" component={Paper}
                             sx={{
-                                marginLeft: "auto",
-                                marginRight: "auto",
+                                width: 'inherit',
+                                align: 'center',
                                 marginTop: 4,
                                 borderRadius: 2,
                                 maxHeight: 700
@@ -45,20 +47,25 @@ class GitLabCommitTable extends React.Component<CommitTableProps> {
                                     sx={{'&:last-child td, &:last-child th': {border: 0}}}
                                 >
                                     <TableCell
-                                        sx={{
-                                            minWidth: 30,
-                                            maxWidth: 150,
+                                        style={{
+                                            minWidth: 5,
+                                            maxWidth: 'auto',
+
+
                                         }}
+
+
                                     >{commit.title}</TableCell>
-                                    <TableCell sx={{
-                                        minWidth: 20,
-                                        maxWidth: 50
+                                    <TableCell style={{
+                                        maxWidth: 5
                                     }}>{commit.author_name}</TableCell>
-                                    <TableCell>{commit.committer_name}</TableCell>
-                                    <TableCell sx={{
-                                        minWidth: 20,
-                                        maxWidth: 50,
-                                        align: 'center'
+                                    <TableCell
+                                        style={{
+                                            maxWidth: 1
+                                        }}
+                                    >{commit.committer_name}</TableCell>
+                                    <TableCell style={{
+                                        maxWidth: 1
                                     }}
 
                                     >{commit.committed_date.split("T")[0]}</TableCell>

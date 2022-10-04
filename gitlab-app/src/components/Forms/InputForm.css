@@ -1,6 +1,6 @@
 #inputform {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     column-gap: 15px;
@@ -16,6 +16,16 @@
 }
 
 /* MEDIA QUERIES*/
+
+@media only screen and (max-width: 1125px) {
+    #inputform {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+    }
+}
 
 /* phone */
 @media screen and (max-device-width: 350px) {

@@ -20,10 +20,10 @@ class GitLabIssueTable extends React.Component<CommitTableProps> {
         return (
             <TableContainer className="issueTable" component={Paper}
                             sx={{
-                                marginLeft: "auto",
-                                marginRight: "auto",
+                                width: 'inherit',
+                                align: 'center',
                                 marginTop: 4,
-                                borderRadius: 4,
+                                borderRadius: 2,
                                 maxHeight: 700
                             }}>
                 <Table id="iTable" aria-label="simple table" stickyHeader
@@ -45,12 +45,28 @@ class GitLabIssueTable extends React.Component<CommitTableProps> {
                                     }}
                                 >
                                     <TableCell
-                                        width={100}>{issue.title}</TableCell>
+                                        style={{
+                                            minWidth: 'auto',
+                                            maxWidth: 70
+                                        }}>{issue.title}
+
+                                    </TableCell>
                                     <TableCell
-                                        width={400}>{issue.description}</TableCell>
-                                    <TableCell>{issue.state}</TableCell>
+                                        style={{
+                                            minWidth: 'auto',
+                                            maxWidth: 70
+                                        }}>{issue.description}</TableCell>
+
                                     <TableCell
-                                        align='center'
+                                        style={{
+                                            minWidth: 'auto',
+                                            maxWidth: 70
+                                        }}>{issue.state}</TableCell>
+                                    <TableCell
+                                        style={{
+                                            minWidth: 'auto',
+                                            maxWidth: 70
+                                        }}
                                     >{issue.created_at.split("T")[0]}</TableCell>
                                 </TableRow>
                         ))}

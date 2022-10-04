@@ -1,19 +1,21 @@
 #container {
+    place-items: center;
     display: grid;
     width: 90%;
-    justify-content: center;
     grid-template-columns: 1fr;
-    margin: 0;
+    margin: auto;
     grid-column: fullWidth;
-    gap: 200px;
+    gap: 100px;
 }
 
 #input {
+    justify-content: center;
+    align-items: center;
     width: 100%;
 }
 
 #repoTable {
-    width: 100%;
+
 }
 
 #input h2 {
@@ -48,60 +50,31 @@
         display: flex;
         flex-direction: column;
         grid-template-columns: repeat(1, 1fr);
-        width: 100%;
-
-        margin-left: 90px;
+        width: 90%;
     }
 }
 
-@media screen and (min-device-width: 481px)
-and (max-device-width: 768px) {
-    #repoTable {
-        justify-content: center;
-        margin-left: -50px;
-    }
-
-    #input {
-        justify-content: center;
-        margin-top: 80px;
-        margin-left: -50px;
-    }
-
-    #input h2 {
-        text-align: left;
-    }
-
-    #repoTable h2 {
-        text-align: left;
-        margin-left: 25px;
-
-    }
-}
 
 /* phone */
 
 @media screen and (max-device-width: 480px) {
+    #container {
+        width: 100%;
+    }
+
     #repoTable {
-        justify-content: center;
-        margin-top: 50px;
-        margin-left: 125px;
-        width: 60%;
-        height: -60%;
+        width: 100%;
+
+
     }
 
     #input {
-        justify-content: center;
+
         margin-top: 10px;
-        margin-left: 180px;
-        width: 40%;
+
+
     }
-    #repoTable h2 {
-        text-align: center;
-    } #input h2 {
-        text-align: center;
-        margin-left: -25px;
-        width: max-content;
-    }
+
 }
 
 

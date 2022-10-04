@@ -13,7 +13,7 @@ function GitLabRepoDataLoader(props: TypographyProps) {
 
             >
                 <h2>Repo Input</h2>
-                <hr/>
+                <hr style={{marginBottom: '10px'}}/>
 
                 <InputForm/>
             </Grid>

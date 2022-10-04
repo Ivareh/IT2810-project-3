@@ -109,7 +109,8 @@ function GitLabRepo() {
 
     return (
         <>
-            <Grid id="button"container direction={"row"} spacing={15} wrap={"nowrap"}
+            <Grid id="buttons" container direction={"row"} spacing={15}
+                  wrap={"nowrap"}
                   justifyContent={"center"} mb={10}>
                 <Grid item>
                     <Button variant="contained"
@@ -123,7 +124,16 @@ function GitLabRepo() {
                 </Grid>
             </Grid>
 
-            {showCommits && <Box mb={28}>
+
+            {showCommits && <Box mb={10}
+                                 style={{
+                                     justifyContent: 'center',
+                                     alignItems: 'center',
+                                     width: 'auto%'
+                                 }
+                                 }
+
+                                 id={'databox'}>
                 <Container id="commits" maxWidth="lg">
                     <Typography mb={5} variant="h5" fontWeight={"bold"}
                                 align="left">Commits</Typography>
@@ -137,7 +147,7 @@ function GitLabRepo() {
             </Box>}
 
             {showIssues && <Box mb={28}>
-                <Container id="issue"maxWidth="lg">
+                <Container id="issue" maxWidth="lg">
                     <Typography mb={5} variant="h5" fontWeight={"bold"}
                                 align="left">Issues</Typography>
                     <Box maxWidth={"70%"}>

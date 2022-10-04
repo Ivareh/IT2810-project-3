@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="826a2bb9-2246-4f2b-b8c6-c322c6eca183" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gitlab-app/src/components/Forms/InputForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/Forms/InputForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/Forms/InputForm.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/Forms/InputForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/Forms/InputForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/GitLab.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/GitLab.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/GitLabRepo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/GitLabRepo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/GitLabRepoDataLoader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/GitLabRepoDataLoader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/component-css/GitLabRepoDataLoader.css" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/component-css/GitLabRepoDataLoader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/tables/GitLabCommitTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/tables/GitLabCommitTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/tables/GitLabIssueTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/tables/GitLabIssueTable.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +22,7 @@
       <list>
         <option value="CSS File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>

@@ -8,9 +8,10 @@ function GitLab() {
                  sx={{
                      display: 'flex',
                      justifyContent: 'center',
-                     width: '100%'
+                     width: '100%',
+                     padding: '0'
                  }}
-                 maxWidth="lg">
+      >
           <GitLabRepoDataLoader/>
           <Box>
               {/* <GitLabRepo/>*/}

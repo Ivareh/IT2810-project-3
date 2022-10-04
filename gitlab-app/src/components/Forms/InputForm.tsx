@@ -59,14 +59,15 @@ export default function InputForm() {
         <form
             onSubmit={handleSubmit}
             id={'inputform'}
-            style={{display: "flex", flexFlow: 'row wrap'}}>
+        >
             <TextField id="outlined-search"
                        inputProps={{"data-testid": "domain"}}
                        sx={{
-                           marginTop: '20px',
-                           minWidth: 350,
+                           justifyContent: 'center',
+                           alignItems: 'center',
+                           minWidth: 320,
                            fontSize: '24px',
-                           marginBottom: '25px'
+                           marginBottom: '10px'
                        }}
                        fullWidth
                        label="Domain"
@@ -79,9 +80,9 @@ export default function InputForm() {
             <TextField id="gitlab-id"
                        inputProps={{"data-testid": "gitlab-id"}}
                        sx={{
-                           minWidth: 350,
+                           minWidth: 320,
                            fontSize: '24px',
-                           marginBottom: '25px'
+                           marginBottom: '10px'
                        }}
                        label="Project id"
                        fullWidth
@@ -93,9 +94,9 @@ export default function InputForm() {
             />
             <TextField id="outlined-search"
                        sx={{
-                           minWidth: 350,
+                           minWidth: 320,
                            fontSize: '24px',
-                           marginBottom: '25px'
+                           marginBottom: '10px'
                        }}
                        inputProps={{"data-testid": "token"}}
                        fullWidth
@@ -111,7 +112,10 @@ export default function InputForm() {
                     data-testid={'get'}
                     variant="contained"
                     type={'submit'}
-                    sx={{minWidth: 100, maxWidth: 500}}
+                    sx={{
+                        width: 100,
+
+                    }}
                     endIcon={<SendIcon/>}>
                     Get
                 </Button>
