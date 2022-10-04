@@ -1,20 +1,19 @@
-import React from "react";
-import {Grid} from "@mui/material";
+import { Grid } from "@mui/material";
 import './component-css/About.css';
 
 
 export default function About() {
     return (
         <Grid className="about"
-              container
-              sx={{
-                  flexFlow: 'nowrap',
-                  textAlign: 'center',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  height: '50vh',
-                  width: 'auto'
-              }}
+            container
+            sx={{
+                flexFlow: 'nowrap',
+                textAlign: 'center',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                height: '50vh',
+                width: 'auto'
+            }}
         >
             <h2
                 style={{

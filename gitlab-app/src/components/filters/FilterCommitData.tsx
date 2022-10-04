@@ -1,8 +1,8 @@
-import {CommitItem, CommitKey} from "../interface/DataFormat"
+import { CommitItem, CommitKey } from "../interface/DataFormat"
 
 function filterById(data: CommitItem[], id: string) {
-  let filtered = data.filter(e => e.id.toString() == id)
-  if (filtered.length == 0) {
+  let filtered = data.filter(e => e.id.toString() === id)
+  if (filtered.length === 0) {
     throw new Error("No data found")
   }
   return filtered
@@ -10,7 +10,7 @@ function filterById(data: CommitItem[], id: string) {
 
 function filterByCommitTitle(data: CommitItem[], title: string) {
   let filtered = data.filter(e => e.title.toLowerCase().includes(title.toLowerCase()))
-  if (filtered.length == 0) {
+  if (filtered.length === 0) {
     throw new Error("No data found")
   }
   return filtered
@@ -19,7 +19,7 @@ function filterByCommitTitle(data: CommitItem[], title: string) {
 function filterByCommitAuthor(data: CommitItem[], Author: string) {
   let filtered = data.filter(e => e.author_name.toLowerCase().includes(Author.toLowerCase()))
   console.log(Author)
-  if (filtered.length == 0) {
+  if (filtered.length === 0) {
     throw new Error("No data found")
   }
   return filtered
@@ -28,7 +28,7 @@ function filterByCommitAuthor(data: CommitItem[], Author: string) {
 
 function filterByCommitCommitter(data: CommitItem[], Committer: string) {
   let filtered = data.filter(e => e.committer_name.toLowerCase().includes(Committer.toLowerCase()))
-  if (filtered.length == 0) {
+  if (filtered.length === 0) {
     throw new Error("No data found")
   }
   return filtered
@@ -36,7 +36,7 @@ function filterByCommitCommitter(data: CommitItem[], Committer: string) {
 
 function filterByCommitDate(data: CommitItem[], Date: string) {
   let filtered = data.filter(e => e.committed_date.toLowerCase().includes(Date.toLowerCase()))
-  if (filtered.length == 0) {
+  if (filtered.length === 0) {
     throw new Error("No data found")
   }
   return filtered

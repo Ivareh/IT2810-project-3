@@ -1,4 +1,4 @@
-import {Grid, TypographyProps,} from "@mui/material";
+import { Grid, TypographyProps, } from "@mui/material";
 import GitLabRepo from "./GitLabRepo";
 import InputForm from "./forms/InputForm";
 import "./component-css/GitLabRepoDataLoader.css";
@@ -9,18 +9,18 @@ function GitLabRepoDataLoader(props: TypographyProps) {
         <Grid container id="container">
             <Grid
                 id="input"
-                sx={{width: '100%', alignItems: 'center'}}
+                sx={{ width: '100%', alignItems: 'center' }}
 
             >
                 <h2>Repo Input</h2>
-                <hr/>
+                <hr />
 
-                <InputForm/>
+                <InputForm />
             </Grid>
             <Grid id="repoTable">
                 <h2>Repo Data Table</h2>
-                <hr/>
-                <GitLabRepo/>
+                <hr />
+                <GitLabRepo />
             </Grid>
         </Grid>
     );

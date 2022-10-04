@@ -1,8 +1,8 @@
 import React from 'react';
-import {Box, IconButton, useTheme} from '@mui/material';
+import { Box, IconButton, useTheme } from '@mui/material';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
-import {ColorModeContext} from './contexts/ColorMode';
+import { ColorModeContext } from './contexts/ColorMode';
 
 /**
  * Returns a box covering the entire screen that is black or white.
@@ -26,7 +26,7 @@ export default function SwapModes() {
     >
       {theme.palette.mode} mode
       <IconButton
-        sx={{ml: 0}}
+        sx={{ ml: 0 }}
         onClick={colorMode.toggleColorMode}
         color="inherit"
       >

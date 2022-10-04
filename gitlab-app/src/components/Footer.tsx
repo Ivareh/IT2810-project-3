@@ -1,19 +1,18 @@
-import React from "react";
 import SwapModes from "./SwapModes";
-import {Grid, Typography} from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import './component-css/Footer.css';
 
 export default function Footer() {
     return (
         <Grid id="footerContainer" container marginTop={10} flexGrow={1}
-              alignItems="flex-end">
+            alignItems="flex-end">
             <Grid
                 container
                 direction="row"
                 justifyContent="center"
                 alignItems="center"
                 height="fit-content"
-                sx={{py: 1}}
+                sx={{ py: 1 }}
             >
                 <Grid
                     container
@@ -44,11 +43,11 @@ export default function Footer() {
                     </Typography>
                 </Grid>
                 <Grid container
-                      item
-                      direction="column"
-                      width={1 / 3}
-                      alignItems="center">
-                    <SwapModes/>
+                    item
+                    direction="column"
+                    width={1 / 3}
+                    alignItems="center">
+                    <SwapModes />
                 </Grid>
             </Grid>
         </Grid>

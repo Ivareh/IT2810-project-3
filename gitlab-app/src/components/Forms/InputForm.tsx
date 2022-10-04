@@ -1,9 +1,9 @@
 import TextField from "@mui/material/TextField";
 import SendIcon from "@mui/icons-material/Send";
 import Button from "@mui/material/Button";
-import {useState} from "react";
+import { useState } from "react";
 import "./InputForm.css";
-import {Box} from "@mui/material";
+import { Box } from "@mui/material";
 
 export default function InputForm() {
     const [domain, setDomain] = useState(
@@ -16,7 +16,7 @@ export default function InputForm() {
         e.preventDefault()
         fetchCommits().then((data) => localStorage.setItem('commits',
             JSON.stringify(data))).then(() =>
-            alert('Data loaded!'))
+                alert('Data loaded!'))
 
         fetchIssues().then((data) => localStorage.setItem('issues',
             JSON.stringify(data)))
@@ -59,60 +59,60 @@ export default function InputForm() {
         <form
             onSubmit={handleSubmit}
             id={'inputform'}
-            style={{display: "flex", flexFlow: 'row wrap'}}>
+            style={{ display: "flex", flexFlow: 'row wrap' }}>
             <TextField id="outlined-search"
-                       inputProps={{"data-testid": "domain"}}
-                       sx={{
-                           marginTop: '20px',
-                           minWidth: 350,
-                           fontSize: '24px',
-                           marginBottom: '25px'
-                       }}
-                       fullWidth
-                       label="Domain"
-                       type="text"
-                       value={domain}
-                       onChange={(event) => {
-                           setDomain(event.target.value as string)
-                       }}
+                inputProps={{ "data-testid": "domain" }}
+                sx={{
+                    marginTop: '20px',
+                    minWidth: 350,
+                    fontSize: '24px',
+                    marginBottom: '25px'
+                }}
+                fullWidth
+                label="Domain"
+                type="text"
+                value={domain}
+                onChange={(event) => {
+                    setDomain(event.target.value as string)
+                }}
             />
             <TextField id="gitlab-id"
-                       inputProps={{"data-testid": "gitlab-id"}}
-                       sx={{
-                           minWidth: 350,
-                           fontSize: '24px',
-                           marginBottom: '25px'
-                       }}
-                       label="Project id"
-                       fullWidth
-                       type="number"
-                       value={projectId}
-                       onChange={(event) => {
-                           setProjectId(event.target.value as string)
-                       }}
+                inputProps={{ "data-testid": "gitlab-id" }}
+                sx={{
+                    minWidth: 350,
+                    fontSize: '24px',
+                    marginBottom: '25px'
+                }}
+                label="Project id"
+                fullWidth
+                type="number"
+                value={projectId}
+                onChange={(event) => {
+                    setProjectId(event.target.value as string)
+                }}
             />
             <TextField id="outlined-search"
-                       sx={{
-                           minWidth: 350,
-                           fontSize: '24px',
-                           marginBottom: '25px'
-                       }}
-                       inputProps={{"data-testid": "token"}}
-                       fullWidth
-                       label="Token"
-                       type="text"
-                       value={token}
-                       onChange={(event) => {
-                           setToken(event.target.value as string)
-                       }}
+                sx={{
+                    minWidth: 350,
+                    fontSize: '24px',
+                    marginBottom: '25px'
+                }}
+                inputProps={{ "data-testid": "token" }}
+                fullWidth
+                label="Token"
+                type="text"
+                value={token}
+                onChange={(event) => {
+                    setToken(event.target.value as string)
+                }}
             />
             <Box ml={1}>
                 <Button
                     data-testid={'get'}
                     variant="contained"
                     type={'submit'}
-                    sx={{minWidth: 100, maxWidth: 500}}
-                    endIcon={<SendIcon/>}>
+                    sx={{ minWidth: 100, maxWidth: 500 }}
+                    endIcon={<SendIcon />}>
                     Get
                 </Button>
             </Box>

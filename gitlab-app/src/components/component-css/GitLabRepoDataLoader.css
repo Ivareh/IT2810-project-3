@@ -54,8 +54,7 @@
     }
 }
 
-@media screen and (min-device-width: 481px)
-and (max-device-width: 768px) {
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) {
     #repoTable {
         justify-content: center;
         margin-left: -50px;
@@ -95,14 +94,14 @@ and (max-device-width: 768px) {
         margin-left: 180px;
         width: 40%;
     }
+
     #repoTable h2 {
         text-align: center;
-    } #input h2 {
+    }
+
+    #input h2 {
         text-align: center;
         margin-left: -25px;
         width: max-content;
     }
 }
-
-
-
