@@ -34,7 +34,7 @@ function filterByIssueCommitter(data: IssueItem[], state: string) {
 }
 
 function filterByIssueDate(data: IssueItem[], Date: string) {
-    let filtered = data.filter(e => e.created_at.toLowerCase().includes(Date.toLowerCase()))
+    let filtered = data.filter(e => e.created_at.split("T")[0].toLowerCase().includes(Date.toLowerCase()))
     if (filtered.length === 0) {
         throw new Error("No data found")
     }
