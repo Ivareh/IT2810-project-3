@@ -35,7 +35,7 @@ function filterByCommitCommitter(data: CommitItem[], Committer: string) {
 }
 
 function filterByCommitDate(data: CommitItem[], Date: string) {
-  let filtered = data.filter(e => e.committed_date.toLowerCase().includes(Date.toLowerCase()))
+  let filtered = data.filter(e => e.committed_date.split("T")[0].toLowerCase().includes(Date.toLowerCase()))
   if (filtered.length === 0) {
     throw new Error("No data found")
   }
