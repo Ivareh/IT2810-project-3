@@ -126,7 +126,7 @@ function GitLabRepo() {
                 <Container maxWidth="lg">
                     <Typography mb={5} variant="h5" fontWeight={"bold"}
                                 align="left">Commits</Typography>
-                    <Box maxWidth={"100%"}>
+                    <Box maxWidth={"70%"}>
                         <FilterFormCommit
                             handleClick={getValues}
                         />
@@ -139,7 +139,7 @@ function GitLabRepo() {
                 <Container maxWidth="lg">
                     <Typography mb={5} variant="h5" fontWeight={"bold"}
                                 align="left">Issues</Typography>
-                    <Box maxWidth={"100%"}>
+                    <Box maxWidth={"70%"}>
                         <FilterFormIssue handleClick={getValues}/>
                     </Box>
                     <GitLabIssueTable data={issueData}/>

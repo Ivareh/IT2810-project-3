@@ -1,6 +1,6 @@
 import React from "react";
 import {Grid} from "@mui/material";
-import './css/About.css';
+import './component-css/About.css';
 
 
 export default function About() {

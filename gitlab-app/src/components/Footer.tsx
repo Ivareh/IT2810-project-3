@@ -1,7 +1,7 @@
 import React from "react";
 import SwapModes from "./SwapModes";
 import {Grid, Typography} from "@mui/material";
-import './css/Footer.css';
+import './component-css/Footer.css';
 
 export default function Footer() {
     return (

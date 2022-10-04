@@ -2,18 +2,24 @@
 
 exports[`The snapshot matches the reference 1`] = `
 [
-  <div>
-    <header
-      className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-hc45uw-MuiPaper-root-MuiAppBar-root"
+  <div
+    className="MuiGrid-root css-vj1n65-MuiGrid-root"
+    id="header"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+      id="navigationMenu"
     >
       <div
-        className="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+        className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        id="logo"
       >
+         
         <button
           className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
           disabled={false}
+          id="icon"
           onBlur={[Function]}
-          onClick={[Function]}
           onContextMenu={[Function]}
           onDragLeave={[Function]}
           onFocus={[Function]}
@@ -28,43 +34,403 @@ exports[`The snapshot matches the reference 1`] = `
           tabIndex={0}
           type="button"
         >
-          <svg
-            aria-hidden={true}
-            className="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-tzssek-MuiSvgIcon-root"
-            color="#e24329"
-            focusable="false"
-            viewBox="0 0 24 24"
+          <a
+            href="https://gitlab.stud.idi.ntnu.no/it2810-h22/Team-62/it2810-h22-team-62"
+            target="_blank"
           >
             <svg
-              viewBox="0 0 380 380"
-              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-tzssek-MuiSvgIcon-root"
+              color="#e24329"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <defs />
-              <g
-                id="LOGO"
+              <svg
+                viewBox="0 0 380 380"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  d="M282.83,170.73l-.27-.69-26.14-68.22a6.81,6.81,0,0,0-2.69-3.24,7,7,0,0,0-8,.43,7,7,0,0,0-2.32,3.52l-17.65,54H154.29l-17.65-54A6.86,6.86,0,0,0,134.32,99a7,7,0,0,0-8-.43,6.87,6.87,0,0,0-2.69,3.24L97.44,170l-.26.69a48.54,48.54,0,0,0,16.1,56.1l.09.07.24.17,39.82,29.82,19.7,14.91,12,9.06a8.07,8.07,0,0,0,9.76,0l12-9.06,19.7-14.91,40.06-30,.1-.08A48.56,48.56,0,0,0,282.83,170.73Z"
-                />
-                <path
-                  d="M282.83,170.73l-.27-.69a88.3,88.3,0,0,0-35.15,15.8L190,229.25c19.55,14.79,36.57,27.64,36.57,27.64l40.06-30,.1-.08A48.56,48.56,0,0,0,282.83,170.73Z"
-                />
-                <path
-                  d="M132.58,185.84A88.19,88.19,0,0,0,97.44,170l-.26.69a48.54,48.54,0,0,0,16.1,56.1l.09.07.24.17,39.82,29.82s17-12.85,36.57-27.64Z"
-                />
-                <path
-                  d="M153.43,256.89l19.7,14.91,12,9.06a8.07,8.07,0,0,0,9.76,0l12-9.06,19.7-14.91S209.55,244,190,229.25C170.45,244,153.43,256.89,153.43,256.89Z"
-                />
-              </g>
+                <defs />
+                <g
+                  id="LOGO"
+                >
+                  <path
+                    d="M282.83,170.73l-.27-.69-26.14-68.22a6.81,6.81,0,0,0-2.69-3.24,7,7,0,0,0-8,.43,7,7,0,0,0-2.32,3.52l-17.65,54H154.29l-17.65-54A6.86,6.86,0,0,0,134.32,99a7,7,0,0,0-8-.43,6.87,6.87,0,0,0-2.69,3.24L97.44,170l-.26.69a48.54,48.54,0,0,0,16.1,56.1l.09.07.24.17,39.82,29.82,19.7,14.91,12,9.06a8.07,8.07,0,0,0,9.76,0l12-9.06,19.7-14.91,40.06-30,.1-.08A48.56,48.56,0,0,0,282.83,170.73Z"
+                  />
+                  <path
+                    d="M282.83,170.73l-.27-.69a88.3,88.3,0,0,0-35.15,15.8L190,229.25c19.55,14.79,36.57,27.64,36.57,27.64l40.06-30,.1-.08A48.56,48.56,0,0,0,282.83,170.73Z"
+                  />
+                  <path
+                    d="M132.58,185.84A88.19,88.19,0,0,0,97.44,170l-.26.69a48.54,48.54,0,0,0,16.1,56.1l.09.07.24.17,39.82,29.82s17-12.85,36.57-27.64Z"
+                  />
+                  <path
+                    d="M153.43,256.89l19.7,14.91,12,9.06a8.07,8.07,0,0,0,9.76,0l12-9.06,19.7-14.91S209.55,244,190,229.25C170.45,244,153.43,256.89,153.43,256.89Z"
+                  />
+                </g>
+              </svg>
             </svg>
-          </svg>
+          </a>
         </button>
-        <div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-kp1keo-MuiGrid-root"
+      id="mainText"
+    >
+      <h1>
+        GitLab Repo
+      </h1>
+      <p>
+        Helps you visualize your GitLab data
+      </p>
+    </div>
+  </div>,
+  <div
+    className="MuiGrid-root MuiGrid-container about css-1pw2zci-MuiGrid-root"
+  >
+    <h2
+      style={
+        {
+          "fontSize": "40px",
+          "fontWeight": "normal",
+          "letterSpacing": "2px",
+          "marginBottom": "0px",
+          "marginTop": "20px",
+        }
+      }
+    >
+      About us
+    </h2>
+    <p
+      style={
+        {
+          "fontSize": "20px",
+          "fontWeight": "normal",
+          "justifyContent": "center",
+          "letterSpacing": "1.5px",
+          "lineHeight": "1.5",
+          "marginBottom": "10px",
+          "marginTop": "1px",
+          "overflow": "hidden",
+          "width": "70%",
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas felis eget elementum placerat. Pellentesque malesuada ipsum nec dui maximus lobortis. Pellentesque eget placerat metus, in pulvinar mi. Vestibulum rhoncus sapien eu pulvinar convallis.
+       
+    </p>
+  </div>,
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg css-hawe8b-MuiContainer-root"
+    id="dataContainer"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+      id="container"
+    >
+      <div
+        className="MuiGrid-root css-79wr06-MuiGrid-root"
+        id="input"
+      >
+        <h2>
+          Repo Input
+        </h2>
+        <hr />
+        <form
+          id="inputform"
+          onSubmit={[Function]}
+          style={
+            {
+              "display": "flex",
+              "flexFlow": "row wrap",
+            }
+          }
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-w1fele-MuiFormControl-root-MuiTextField-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink={true}
+              htmlFor="outlined-search"
+              id="outlined-search-label"
+            >
+              Domain
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                data-testid="domain"
+                disabled={false}
+                id="outlined-search"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={false}
+                type="text"
+                value="https://gitlab.stud.idi.ntnu.no/api/v4/projects/"
+              />
+              <fieldset
+                aria-hidden={true}
+                className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="css-14lo706"
+                >
+                  <span>
+                    Domain
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-nibr1k-MuiFormControl-root-MuiTextField-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink={true}
+              htmlFor="gitlab-id"
+              id="gitlab-id-label"
+            >
+              Project id
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                data-testid="gitlab-id"
+                disabled={false}
+                id="gitlab-id"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={false}
+                type="number"
+                value="17598"
+              />
+              <fieldset
+                aria-hidden={true}
+                className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="css-14lo706"
+                >
+                  <span>
+                    Project id
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-nibr1k-MuiFormControl-root-MuiTextField-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink={true}
+              htmlFor="outlined-search"
+              id="outlined-search-label"
+            >
+              Token
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                data-testid="token"
+                disabled={false}
+                id="outlined-search"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={false}
+                type="text"
+                value="glpat-2vnnyXYGFDt9YKYu5QYW"
+              />
+              <fieldset
+                aria-hidden={true}
+                className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="css-14lo706"
+                >
+                  <span>
+                    Token
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+          <div
+            className="MuiBox-root css-1isemmb"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-3kuijb-MuiButtonBase-root-MuiButton-root"
+              data-testid="get"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              type="submit"
+            >
+              Get
+              <span
+                className="MuiButton-endIcon MuiButton-iconSizeMedium css-9tj150-MuiButton-endIcon"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="SendIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div
+        className="MuiGrid-root css-vj1n65-MuiGrid-root"
+        id="repoTable"
+      >
+        <h2>
+          Repo Data Table
+        </h2>
+        <hr />
+        <div
+          className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-20 MuiGrid-wrap-xs-nowrap css-14itez4-MuiGrid-root"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-lb0t7z-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              type="button"
+            >
+              Commits
+            </button>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-lb0t7z-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              type="button"
+            >
+              Issues
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiBox-root css-0"
+    />
+  </div>,
+  <div
+    className="MuiGrid-root MuiGrid-container css-su9zg1-MuiGrid-root"
+    id="footerContainer"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-1jzqapq-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-direction-xs-column css-1iat5zo-MuiGrid-root"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+        >
+          GitLab Repo © Team 62
+        </p>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-direction-xs-column css-1iat5zo-MuiGrid-root"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+        >
+          Check us out on
+           
+          <a
+            href="https://gitlab.stud.idi.ntnu.no/it2810-h22/Team-62/it2810-h22-team-62"
+            rel="noreferrer"
+            target="_blank"
+          >
+            GitLab
+          </a>
+        </p>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-direction-xs-column css-1iat5zo-MuiGrid-root"
+      >
+        <div
+          className="MuiBox-root css-nvvjlk"
+        >
+          light
+           mode
           <button
-            aria-haspopup="true"
-            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium css-cvas6z-MuiButtonBase-root-MuiButton-root"
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-qo62uw-MuiButtonBase-root-MuiIconButton-root"
             disabled={false}
-            id="demo-positioned-button"
             onBlur={[Function]}
             onClick={[Function]}
             onContextMenu={[Function]}
@@ -83,334 +449,19 @@ exports[`The snapshot matches the reference 1`] = `
           >
             <svg
               aria-hidden={true}
-              className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
-              data-testid="MenuIcon"
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="Brightness4Icon"
               focusable="false"
               viewBox="0 0 24 24"
             >
               <path
-                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+                d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6c3.31 0 6 2.69 6 6s-2.69 6-6 6z"
               />
             </svg>
-            <p
-              className="MuiTypography-root MuiTypography-body2 css-nj8mvg-MuiTypography-root"
-            >
-              Menu
-            </p>
-          </button>
-        </div>
-      </div>
-    </header>
-  </div>,
-  <div
-    className="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
-  >
-    <div
-      className="MuiBox-root css-ib9iq6"
-    >
-      <div
-        className="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
-      >
-        <div
-          className="MuiBox-root css-1h0ouo7"
-        >
-          <div
-            className="MuiBox-root css-1lk7enj"
-          >
-            <h4
-              className="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter css-kgvukv-MuiTypography-root"
-            >
-               GitLab Repo Data Loader 
-            </h4>
-          </div>
-          <div
-            className="MuiBox-root css-1k9h2vf"
-          >
-            <form
-              onSubmit={[Function]}
-              style={
-                {
-                  "display": "flex",
-                  "flexFlow": "row nowrap",
-                }
-              }
-            >
-              <div
-                className="MuiBox-root css-widv0o"
-              >
-                <div
-                  className="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-                >
-                  <label
-                    className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
-                    data-shrink={true}
-                    htmlFor="outlined-search"
-                    id="outlined-search-label"
-                  >
-                    Domain
-                  </label>
-                  <div
-                    className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
-                    onClick={[Function]}
-                  >
-                    <input
-                      aria-invalid={false}
-                      autoFocus={false}
-                      className="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-                      data-testid="domain"
-                      disabled={false}
-                      id="outlined-search"
-                      onAnimationStart={[Function]}
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      required={false}
-                      type="text"
-                      value="https://gitlab.stud.idi.ntnu.no/api/v4/projects/"
-                    />
-                    <fieldset
-                      aria-hidden={true}
-                      className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-                    >
-                      <legend
-                        className="css-14lo706"
-                      >
-                        <span>
-                          Domain
-                        </span>
-                      </legend>
-                    </fieldset>
-                  </div>
-                </div>
-                <div
-                  className="MuiFormControl-root MuiTextField-root css-1h4s3eq-MuiFormControl-root-MuiTextField-root"
-                >
-                  <label
-                    className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
-                    data-shrink={true}
-                    htmlFor="gitlab-id"
-                    id="gitlab-id-label"
-                  >
-                    Project id
-                  </label>
-                  <div
-                    className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
-                    onClick={[Function]}
-                  >
-                    <input
-                      aria-invalid={false}
-                      autoFocus={false}
-                      className="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-                      data-testid="gitlab-id"
-                      disabled={false}
-                      id="gitlab-id"
-                      onAnimationStart={[Function]}
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      required={false}
-                      type="number"
-                      value="17598"
-                    />
-                    <fieldset
-                      aria-hidden={true}
-                      className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-                    >
-                      <legend
-                        className="css-14lo706"
-                      >
-                        <span>
-                          Project id
-                        </span>
-                      </legend>
-                    </fieldset>
-                  </div>
-                </div>
-                <div
-                  className="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-                >
-                  <label
-                    className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
-                    data-shrink={true}
-                    htmlFor="outlined-search"
-                    id="outlined-search-label"
-                  >
-                    Token
-                  </label>
-                  <div
-                    className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
-                    onClick={[Function]}
-                  >
-                    <input
-                      aria-invalid={false}
-                      autoFocus={false}
-                      className="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-                      data-testid="token"
-                      disabled={false}
-                      id="outlined-search"
-                      onAnimationStart={[Function]}
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      required={false}
-                      type="text"
-                      value="glpat-2vnnyXYGFDt9YKYu5QYW"
-                    />
-                    <fieldset
-                      aria-hidden={true}
-                      className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-                    >
-                      <legend
-                        className="css-14lo706"
-                      >
-                        <span>
-                          Token
-                        </span>
-                      </legend>
-                    </fieldset>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root css-1isemmb"
-                >
-                  <button
-                    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
-                    data-testid="get"
-                    disabled={false}
-                    onBlur={[Function]}
-                    onContextMenu={[Function]}
-                    onDragLeave={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    tabIndex={0}
-                    type="submit"
-                  >
-                    Get
-                    <span
-                      className="MuiButton-endIcon MuiButton-iconSizeMedium css-9tj150-MuiButton-endIcon"
-                    >
-                      <svg
-                        aria-hidden={true}
-                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                        data-testid="SendIcon"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"
-                        />
-                      </svg>
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="MuiBox-root css-0"
-    >
-      <div
-        className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-20 MuiGrid-wrap-xs-nowrap css-14itez4-MuiGrid-root"
-      >
-        <div
-          className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-        >
-          <button
-            className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            Commits
-          </button>
-        </div>
-        <div
-          className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-        >
-          <button
-            className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            Issues
           </button>
         </div>
       </div>
     </div>
-  </div>,
-  <div
-    className="MuiBox-root css-nvvjlk"
-  >
-    light
-     mode
-    <button
-      className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-qo62uw-MuiButtonBase-root-MuiIconButton-root"
-      disabled={false}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onContextMenu={[Function]}
-      onDragLeave={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      tabIndex={0}
-      type="button"
-    >
-      <svg
-        aria-hidden={true}
-        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-        data-testid="Brightness4Icon"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6c3.31 0 6 2.69 6 6s-2.69 6-6 6z"
-        />
-      </svg>
-    </button>
   </div>,
 ]
 `;

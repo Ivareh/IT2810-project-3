@@ -21,7 +21,7 @@ export default function FilterFormCommit(props: FilterFormProps) {
                 display: 'inline-flex',
             }}
             minWidth={"100%"} display="inline-flex" alignItems={"center"}>
-            <Box minWidth={"30%"}>
+            <Box minWidth={"40%"}>
                 <FormControl fullWidth>
                     <InputLabel>Filtertype</InputLabel>
                     <Select

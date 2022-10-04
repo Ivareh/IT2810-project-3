@@ -45,7 +45,11 @@ class GitLabCommitTable extends React.Component<CommitTableProps> {
                                     sx={{'&:last-child td, &:last-child th': {border: 0}}}
                                 >
                                     <TableCell
-                                        width={400}>{commit.title}</TableCell>
+                                        sx={{
+                                            minWidth: 30,
+                                            maxWidth: 150,
+                                        }}
+                                    >{commit.title}</TableCell>
                                     <TableCell sx={{
                                         minWidth: 20,
                                         maxWidth: 50

@@ -23,7 +23,7 @@ class GitLabIssueTable extends React.Component<CommitTableProps> {
                                 marginLeft: "auto",
                                 marginRight: "auto",
                                 marginTop: 4,
-                                borderRadius: 2,
+                                borderRadius: 4,
                                 maxHeight: 700
                             }}>
                 <Table id="iTable" aria-label="simple table" stickyHeader
