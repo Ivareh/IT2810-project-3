@@ -1,24 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="826a2bb9-2246-4f2b-b8c6-c322c6eca183" name="Changes" comment="commit snapshot">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitlab-app/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/jest.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitlab-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitlab-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/About.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/GitLabRepo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/GitLabRepo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/GitLabRepoDataLoader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/GitLabRepoDataLoader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/css/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/component-css/About.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/css/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/component-css/Footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/css/GitLabRepoDataLoader.css" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/component-css/GitLabRepoDataLoader.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/css/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/component-css/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/filter/FilterFormCommit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/filter/FilterFormCommit.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/filter/FilterFormIssue.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/filter/FilterFormIssue.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitlab-app/src/components/tables/GitLabCommitTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/components/tables/GitLabCommitTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitlab-app/src/tests/SnapshotTest/__snapshots__/AppSnapshot.test.tsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab-app/src/tests/SnapshotTest/__snapshots__/AppSnapshot.test.tsx.snap" afterDir="false" />
+    <list default="true" id="826a2bb9-2246-4f2b-b8c6-c322c6eca183" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/gitlab-app/src/components/Forms/InputForm.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

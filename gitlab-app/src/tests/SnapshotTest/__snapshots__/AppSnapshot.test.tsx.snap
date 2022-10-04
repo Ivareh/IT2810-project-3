@@ -85,7 +85,7 @@ exports[`The snapshot matches the reference 1`] = `
     </div>
   </div>,
   <div
-    className="MuiGrid-root MuiGrid-container about css-1pw2zci-MuiGrid-root"
+    className="MuiGrid-root MuiGrid-container about css-89v3vr-MuiGrid-root"
   >
     <h2
       style={
@@ -328,7 +328,8 @@ exports[`The snapshot matches the reference 1`] = `
         </h2>
         <hr />
         <div
-          className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-20 MuiGrid-wrap-xs-nowrap css-14itez4-MuiGrid-root"
+          className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-15 MuiGrid-wrap-xs-nowrap css-1me7lun-MuiGrid-root"
+          id="button"
         >
           <div
             className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
