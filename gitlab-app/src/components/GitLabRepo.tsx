@@ -22,7 +22,7 @@ function GitLabRepo() {
         sessionStorage.setItem("filterOnType", filterType);
         sessionStorage.setItem("filterOnValue", filterValue);
         try {
-            if (sessionStorage.getItem("filterOnKind") == "commits") {
+            if (sessionStorage.getItem("filterOnKind") === "commits") {
                 if (filterValue && filterType) {
                     switch (filterType) {
                         case "":
@@ -44,7 +44,7 @@ function GitLabRepo() {
                 } else {
                     setCommitData(getCommitData())
                 }
-            } else if (sessionStorage.getItem("filterOnKind") == "issues") {
+            } else if (sessionStorage.getItem("filterOnKind") === "issues") {
                 if (filterValue && filterType) {
                     console.log(filterType, filterValue)
                     console.log("ABOVE IS ISSUE FILTER")

@@ -36,6 +36,7 @@ exports[`The snapshot matches the reference 1`] = `
         >
           <a
             href="https://gitlab.stud.idi.ntnu.no/it2810-h22/Team-62/it2810-h22-team-62"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <svg
@@ -83,41 +84,6 @@ exports[`The snapshot matches the reference 1`] = `
         Helps you visualize your GitLab data
       </p>
     </div>
-  </div>,
-  <div
-    className="MuiGrid-root MuiGrid-container about css-89v3vr-MuiGrid-root"
-  >
-    <h2
-      style={
-        {
-          "fontSize": "40px",
-          "fontWeight": "normal",
-          "letterSpacing": "2px",
-          "marginBottom": "0px",
-          "marginTop": "20px",
-        }
-      }
-    >
-      About us
-    </h2>
-    <p
-      style={
-        {
-          "fontSize": "20px",
-          "fontWeight": "normal",
-          "justifyContent": "center",
-          "letterSpacing": "1.5px",
-          "lineHeight": "1.5",
-          "marginBottom": "10px",
-          "marginTop": "1px",
-          "overflow": "hidden",
-          "width": "70%",
-        }
-      }
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas felis eget elementum placerat. Pellentesque malesuada ipsum nec dui maximus lobortis. Pellentesque eget placerat metus, in pulvinar mi. Vestibulum rhoncus sapien eu pulvinar convallis.
-       
-    </p>
   </div>,
   <div
     className="MuiContainer-root MuiContainer-maxWidthLg css-hawe8b-MuiContainer-root"
@@ -389,80 +355,41 @@ exports[`The snapshot matches the reference 1`] = `
     />
   </div>,
   <div
-    className="MuiGrid-root MuiGrid-container css-su9zg1-MuiGrid-root"
-    id="footerContainer"
+    className="MuiBox-root css-nvvjlk"
   >
-    <div
-      className="MuiGrid-root MuiGrid-container css-1jzqapq-MuiGrid-root"
+    light
+     mode
+    <button
+      className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-qo62uw-MuiButtonBase-root-MuiIconButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
     >
-      <div
-        className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-direction-xs-column css-1iat5zo-MuiGrid-root"
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+        data-testid="Brightness4Icon"
+        focusable="false"
+        viewBox="0 0 24 24"
       >
-        <p
-          className="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
-        >
-          GitLab Repo © Team 62
-        </p>
-      </div>
-      <div
-        className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-direction-xs-column css-1iat5zo-MuiGrid-root"
-      >
-        <p
-          className="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
-        >
-          Check us out on
-           
-          <a
-            href="https://gitlab.stud.idi.ntnu.no/it2810-h22/Team-62/it2810-h22-team-62"
-            rel="noreferrer"
-            target="_blank"
-          >
-            GitLab
-          </a>
-        </p>
-      </div>
-      <div
-        className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-direction-xs-column css-1iat5zo-MuiGrid-root"
-      >
-        <div
-          className="MuiBox-root css-nvvjlk"
-        >
-          light
-           mode
-          <button
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-qo62uw-MuiButtonBase-root-MuiIconButton-root"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onContextMenu={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <svg
-              aria-hidden={true}
-              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-              data-testid="Brightness4Icon"
-              focusable="false"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6c3.31 0 6 2.69 6 6s-2.69 6-6 6z"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
+        <path
+          d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6c3.31 0 6 2.69 6 6s-2.69 6-6 6z"
+        />
+      </svg>
+    </button>
   </div>,
 ]
 `;

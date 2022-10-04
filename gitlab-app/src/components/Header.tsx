@@ -1,11 +1,9 @@
-import { useNavigate } from "react-router-dom";
 import GitLabIcon from "./custom-icons/GitLabIcon";
 import { Grid, IconButton } from "@mui/material";
 import "./component-css/Header.css";
 
 // Header of the application
 function Header() {
-    const navigate = useNavigate();
     return (
         <Grid id="header">
             <Grid id="navigationMenu"
@@ -13,7 +11,7 @@ function Header() {
                 <Grid id="logo" container spacing={0}>
                     {" "}
                     <IconButton id="icon">
-                        <a href="https://gitlab.stud.idi.ntnu.no/it2810-h22/Team-62/it2810-h22-team-62"
+                        <a rel="noopener noreferrer" href="https://gitlab.stud.idi.ntnu.no/it2810-h22/Team-62/it2810-h22-team-62"
                             target="_blank"><GitLabIcon htmlColor="#e24329"
                                 fontSize="large" /></a>
 
