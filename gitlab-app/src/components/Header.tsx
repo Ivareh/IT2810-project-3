@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import GitLabIcon from "./custom-icons/GitLabIcon";
 import { Grid, IconButton } from "@mui/material";
 import "./component-css/Header.css";
-import React from "react";
 
 // Header of the application
 function Header() {

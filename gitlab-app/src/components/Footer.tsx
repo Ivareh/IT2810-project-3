@@ -1,4 +1,3 @@
-import React from "react";
 import SwapModes from "./SwapModes";
 import { Grid, Typography } from "@mui/material";
 import './component-css/Footer.css';
