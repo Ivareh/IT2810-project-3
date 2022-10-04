@@ -26,7 +26,7 @@ To filter the data in the tables that include the commits or the issues, we rend
 
 ### Responsive Webdesign
 That the Webapp can be used on multiple end devices we implemented responsive webdesign. So the website looks good and is easy to use independent of the screen size. Therfore we used Viewport to define the visible area depending on the device used.
-Media-queries like `@media screen and (max-device-width: 480px) {grid-template-columns: repeat(2, 1fr)}` define breakpoints so the design changes on each side of the breakpoint. This is useful to define a different layot for different screen sizes.
+Media-queries like `@media screen and (max-device-width: 480px) {grid-template-columns: repeat(2, 1fr)}` define breakpoints so the design changes on each side of the breakpoint. This is useful to define a different layot for different screen sizes. When zooming, we know there is a bug where the title in `Header` overlaps with the user input for repositories form in `InputForm` component. There is also a bug where when you haven't pressed show Commits|Issues, some components are not centered. Haven't been able to fix these issues yet.
 Image scaling is implemented by the 'background-size: cover' property in `header.css`.
 The elements on the page rearrange according to the screensize so that the usual user
 experience is ensured by a flexible layout.
