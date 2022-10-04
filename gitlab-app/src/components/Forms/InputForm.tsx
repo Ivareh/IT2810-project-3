@@ -26,7 +26,6 @@ export default function InputForm() {
     const fetchIssues = async (): Promise<object> => {
         try {
             const url = `${domain}/${projectId}/issues?per_page=100&private_token=${token}`
-            console.log(url)
             const res = await fetch(url)
             if (res.ok) {
                 return await res.json()

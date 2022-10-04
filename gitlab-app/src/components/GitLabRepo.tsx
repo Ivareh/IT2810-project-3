@@ -46,8 +46,6 @@ function GitLabRepo() {
                 }
             } else if (sessionStorage.getItem("filterOnKind") === "issues") {
                 if (filterValue && filterType) {
-                    console.log(filterType, filterValue)
-                    console.log("ABOVE IS ISSUE FILTER")
                     switch (filterType) {
                         case "":
                             setIssueData(getIssueData())

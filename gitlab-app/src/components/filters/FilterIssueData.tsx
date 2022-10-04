@@ -10,7 +10,6 @@ function filterByIssueId(data: IssueItem[], id: string) {
 
 function filterByIssueTitle(data: IssueItem[], title: string) {
     let filtered = data.filter(e => e.title.toLowerCase().includes(title.toLocaleLowerCase()))
-    console.log("hey")
     if (filtered.length === 0) {
         throw new Error("No data found")
     }
@@ -47,8 +46,6 @@ export function filterByIssue(data: IssueItem[], filterType: string, filterValue
             return filterByIssueId(data, filterValue)
         case IssueKey.TITLE:
             const hey = filterByIssueTitle(data, filterValue)
-            console.log("THIS IS HEY")
-            console.log(hey)
             return hey
         case IssueKey.DESCRIPTION:
             return filterByIssueAuthor(data, filterValue)

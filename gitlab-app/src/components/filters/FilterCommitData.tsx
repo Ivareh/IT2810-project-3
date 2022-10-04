@@ -18,7 +18,6 @@ function filterByCommitTitle(data: CommitItem[], title: string) {
 
 function filterByCommitAuthor(data: CommitItem[], Author: string) {
   let filtered = data.filter(e => e.author_name.toLowerCase().includes(Author.toLowerCase()))
-  console.log(Author)
   if (filtered.length === 0) {
     throw new Error("No data found")
   }
