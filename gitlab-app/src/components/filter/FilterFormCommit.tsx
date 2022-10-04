@@ -34,7 +34,7 @@ export default function FilterFormCommit(props: FilterFormProps) {
                     >
                         <MenuItem value={"title"}>Title</MenuItem>
                         <MenuItem value={"author_name"}>Author</MenuItem>
-                        <MenuItem value={"commiter_name"}>Committer</MenuItem>
+                        <MenuItem value={"committer_name"}>Committer</MenuItem>
                         <MenuItem value={"committed_date"}>Date</MenuItem>
                     </Select>
 
