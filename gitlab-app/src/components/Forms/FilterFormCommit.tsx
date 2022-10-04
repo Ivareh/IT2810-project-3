@@ -12,6 +12,7 @@ export interface FilterFormProps {
     handleClick: (filterType: string, filterValue: string) => void;
 }
 
+// Form for commit filtering
 export default function FilterFormCommit(props: FilterFormProps) {
     const [filterType, setFilterType] = useState('author_name')
     const [filterValue, setFilterValue] = useState('')

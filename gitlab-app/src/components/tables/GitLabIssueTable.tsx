@@ -13,6 +13,7 @@ import { IssueItem } from "../interface/DataFormat"
 
 type CommitTableProps = { data: IssueItem[] }
 
+// Takes in issue data and displays it in a table
 class GitLabIssueTable extends React.Component<CommitTableProps> {
 
 

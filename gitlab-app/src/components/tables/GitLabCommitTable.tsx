@@ -13,6 +13,7 @@ import { CommitItem } from "../interface/DataFormat"
 
 type CommitTableProps = { data: CommitItem[] }
 
+// Takes in commit data and displays it in a table
 class GitLabCommitTable extends React.Component<CommitTableProps> {
 
 

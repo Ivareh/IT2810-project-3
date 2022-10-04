@@ -12,6 +12,7 @@ export interface FilterFormProps {
     handleClick: (filterType: string, filterValue: string) => void;
 }
 
+// Form for issue filtering
 export default function FilterFormIssue(props: FilterFormProps) {
     const [filterType, setFilterType] = useState('title')
     const [filterValue, setFilterValue] = useState('')

@@ -5,6 +5,7 @@ import { useState } from "react";
 import "./InputForm.css";
 import { Box } from "@mui/material";
 
+// Input form for the user to input to get the data from the GitLab API with specified repository
 export default function InputForm() {
     const [domain, setDomain] = useState(
         "https://gitlab.stud.idi.ntnu.no/api/v4/projects/"
