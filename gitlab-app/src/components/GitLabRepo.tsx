@@ -8,8 +8,8 @@ import {filterByCommit} from "./filters/FilterCommitData"
 import {filterByIssue} from "./filters/FilterIssueData"
 import {CommitKey, IssueKey} from "./interface/DataFormat"
 import './component-css/GitLabRepo.css'
-import FilterFormCommit from "./Forms/FilterFormCommit";
-import FilterFormIssue from "./Forms/FilterFormIssue";
+import FilterFormCommit from "./forms/FilterFormCommit";
+import FilterFormIssue from "./forms/FilterFormIssue";
 
 /* Displays Git Lab Data after it is loaded in a table with parameters*/
 function GitLabRepo() {
