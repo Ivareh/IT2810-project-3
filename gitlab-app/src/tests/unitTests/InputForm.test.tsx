@@ -1,6 +1,6 @@
 /** @jest-environment jsdom */
 import {cleanup, fireEvent, render, screen} from "@testing-library/react";
-import InputForm from "../../components/Forms/InputForm";
+import InputForm from "../../components/forms/InputForm";
 import '@testing-library/jest-dom'
 
 
